@@ -10,7 +10,8 @@ tracking combined sewer overflows.
 format of their site. We have a file [data/updated_format_cso_events.csv](data/updated_format_csv_events.csv)
 of the updates since then that can be combined with previous data [data/cso_events.csv](data/cso_events.csv)
 * The scraper can then be updated to make sure new data continues to be pulled on
-the server repo: [chicago-river-sewage](https://github.com/open-city/chicago-river-sewage)
+the server repo: [chicago-river-sewage](https://github.com/open-city/chicago-river-sewage).
+Scraping this page [MWRD CSO Synopsis Reports](http://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://1e604003f120f99abce577a4a1dd6bb5)
 
 ## Data Analysis Questions
 
