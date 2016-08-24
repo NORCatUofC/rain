@@ -4,6 +4,8 @@ An open-source data science project about rainfall in Chicago.
 ### Interested in contributing?
 Whether you're looking to show off your mad skills, or learn some new ones, we'd love you to help us build a unique and remarkable story.  Take a look at our active and proposed projects, and jump onto a team.  Anything that you can contribute is welcomed!
 
+Join our [slack channel](https://chihacknight.slack.com/messages/chicago-rain)
+
 ### Active Projects
 ##### n-year
 The Chicago Climate Action plan says that we expect heavier storms due to climate change.  Is this happening?  We are going to attempt to answer this question by focusing on the the n-year event, which is a statistical measurement typically based on historic data denoting the average recurrence interval over an extended period of time.  For example, a 50-year event has a 1/50 chance of occurring in a given year.  For Illinois, the storms are defined in Bulletin 70, located [here](http://www.isws.illinois.edu/atmos/statecli/RF/rf.htm)
