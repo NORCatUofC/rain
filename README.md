@@ -6,6 +6,8 @@ Whether you're looking to show off your mad skills, or learn some new ones, we'd
 
 Join our [slack channel](https://chihacknight.slack.com/messages/chicago-rain)
 
+Our data is currently located on [Google Drive](https://drive.google.com/folderview?id=0B_QE7itsD1z8Qi1BY2RWU1FRaE0&usp=sharing)
+
 ### Active Projects
 ##### n-year
 The Chicago Climate Action plan says that we expect heavier storms due to climate change.  Is this happening?  We are going to attempt to answer this question by focusing on the the n-year event, which is a statistical measurement typically based on historic data denoting the average recurrence interval over an extended period of time.  For example, a 50-year event has a 1/50 chance of occurring in a given year.  For Illinois, the storms are defined in Bulletin 70, located [here](http://www.isws.illinois.edu/atmos/statecli/RF/rf.htm)
