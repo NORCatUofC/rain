@@ -36,3 +36,6 @@ If you're a rider, how much rain is too much rain before you decide to wait it o
 
 ##### 311 Calls
 The city provides 311 call data on the [open data portal](http://data.cityofchicago.org).  How does rainfall affect various types of calls, and can this be a helpful input into some predictive models?
+
+##### Rush hour rainfall
+Heavy storms during rush hour are the worst.
