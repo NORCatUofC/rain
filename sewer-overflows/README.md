@@ -17,3 +17,10 @@ Scraping this page [MWRD CSO Synopsis Reports](http://www.mwrd.org/irj/portal/an
 
 * How much rain does it take for a CSO to occur?
 * How much rain does it take for the locks to be opened?
+
+## MWRD CSO Location Data
+
+Using the [pyesridump](https://github.com/openaddresses/pyesridump) package to scrape
+the ArcGIS server for MWRD used in the map on the [MWRD CSO map](https://www.mwrd.org/irj/portal/anonymous?NavigationTarget=navurl://eec9b2f677d42e0dea742ba5e2b45713)
+
+Server from MWRD map located at http://utility.arcgis.com/usrsvcs/servers/2334828221d740208787b92f2d04ec1a/rest/services/CSO/CSO_Final/FeatureServer/0
