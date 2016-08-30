@@ -4,6 +4,9 @@ Taking data from [istheresewageinthechicagoriver.com](http://istheresewageinthec
 and the [Metropolitan Water Reclamation District](https://www.mwrd.org/irj/portal/anonymous/Home)
 tracking combined sewer overflows.
 
+The new CSO data has a higher level of detail, but has been merged with the older data (with blank values
+for anything that can't be filled in) in [data/merged_cso_data.csv](data/merged_cso_data.csv)
+
 ## Data Cleanup Tasks
 
 * The sewage in the Chicago River scraper stopped working after MWRD updated the
