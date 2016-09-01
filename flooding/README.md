@@ -8,6 +8,17 @@ The Center for Neighborhood Technology report referenced in the article has
 additional information about how basement flooding disproportionately affects Chatham,
 along with other neighborhoods in Chicago: [CNT RainReady Chatham](http://www.cnt.org/sites/default/files/publications/CNT_RainReady%20Community%20-%20Chatham.pdf)
 
+## FEMA Data
+
+Data from FEMA about disaster incidents, housing assistance for owners and renters,
+public assistance applications, and registration intake for individuals in the housing
+program for Cook County, Illinois flood and severe storm events are in the `fema_data`
+directory. Further information about the data can be found here [FEMA Data Feeds](https://www.fema.gov/data-feeds)
+
+The data other than the Disaster Declarations doesn't initially come with the
+`incidentType` field, but this was added for ease of use, and to remove snow, tornado,
+and other types of events.
+
 ## Data Tasks
 
 * Data aggregated to the zip code level exists through the Carto map for the article
