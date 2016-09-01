@@ -1,7 +1,7 @@
 # Chicago Rain
 ### An open-source data science project about rainfall in Chicago
 
-We are a group of citizen data scientists and storytellers exploring the topic of rainfall in Chicago.  We can see that rain events have a huge impact on our city, including crime, transportation, pollution, and damage to personal and public property.  The data is out there, and we're just interested in using our skills (and learn new ones) to explore it.
+We are a group of citizen data scientists and storytellers exploring the topic of rainfall in Chicago.  We can see that rain events have a huge impact on our city, including infrastructure failures, pollution of Lake Michigan and the Chicago River, and damage to personal and public property.  The data is out there, and we're just interested in asking questions and answering them.
 
 ### Logistics
 Join our [slack channel](https://chihacknight.slack.com/messages/chicago-rain)
@@ -25,8 +25,8 @@ How can it be thunderstorming in one part of the city, and dry in another?  When
 ##### Transportation
 Rainfall affects transit patterns, taxi ridership, divvy demand, and causes that pesky Uber surge pricing.  This team will explore the relationship.
 
-#### July 23, 2001
-On this day, 6.86 inches of rain fell on Chicago -- the most ever in a single day, but most of it fell in a 3-hour span.  What was the aftermath of that?
+##### July 23, 2001
+On this day, 6.86 inches of rain fell on Chicago -- the most ever in a single day, but most of it fell in a 3-hour span.  What was the aftermath of that?  How did the CSOs look?  It was really overnight, so maybe look at next morning rush hour.
 
 ##### Crime
 Common sense says that when it rains, certain crimes are less likely.  Tell me more!
