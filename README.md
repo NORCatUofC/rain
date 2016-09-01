@@ -11,7 +11,7 @@ Our data is currently located on [Google Drive](https://drive.google.com/folderv
 ### How this works
 The directories in this repo distinguish different storylines.  Check them out and see if anything suits your fancy.
 
-Looking for something else?  Here is a brainstorm of some of our ideas.  Feel free to just run with any of this, or connect with the group on our Slack channel or on Tuesday nights at ChiHackNight.  
+Looking for something else?  Here is a brainstorm of some of our ideas.  Feel free to just run with any of this, or connect with the group on our [Slack channel](https://chihacknight.slack.com/messages/chicago-rain) or on [Tuesday nights at ChiHackNight](https://chihacknight.org).  
 
 ##### N-year storm
 The Chicago Climate Action plan says that we expect heavier storms due to climate change.  Is this happening?  We are going to attempt to answer this question by focusing on the the n-year event, which is a statistical measurement typically based on historic data denoting the average recurrence interval over an extended period of time.  For example, a 50-year event has a 1/50 chance of occurring in a given year.  For Illinois, the storms are defined in Bulletin 70, located [here](http://www.isws.illinois.edu/atmos/statecli/RF/rf.htm).  This group is currently jamming on data -- mostly in Python.  Come join us.
