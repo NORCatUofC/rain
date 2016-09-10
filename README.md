@@ -1,7 +1,7 @@
 # Chicago Rain
 ### An open-source data science project about rainfall in Chicago
 
-We are a group of citizen data scientists and storytellers exploring the topic of rainfall in Chicago.  We can see that rain events have a huge impact on our city, including infrastructure failures, pollution of Lake Michigan and the Chicago River, and damage to personal and public property.  The data is out there, and we're just interested in asking questions and answering them.
+We are a group of citizen data scientists and storytellers exploring the topic of rainfall in Chicago.  We can see that rain events have a huge impact on our city, including infrastructure failures, pollution of Lake Michigan and the Chicago River, and damage to personal and public property.  The data is out there, and we're interested in an answering questions about the history, geography, and impact to our town.
 
 ### Logistics
 Join our [slack channel](https://chihacknight.slack.com/messages/chicago-rain)
@@ -26,13 +26,13 @@ How can it be thunderstorming in one part of the city, and dry in another?  When
 Rainfall affects transit patterns, taxi ridership, divvy demand, and causes that pesky Uber surge pricing.  This team will explore the relationship.
 
 ##### July 23, 2001
-On this day, 6.86 inches of rain fell on Chicago -- the most ever in a single day, but most of it fell in a 3-hour span.  What was the aftermath of that?  How did the CSOs look?  It was really overnight, so maybe look at next morning rush hour.
+On this day, 6.86 inches of rain fell on Chicago -- the most ever in a single day, but most of it fell in a 3-hour span.  What was the aftermath of that?  How did the CSOs look?  The bulk of it was overnight, so perhaps focus at next morning rush hour(?).
 
 ##### Crime
 Common sense says that when it rains, certain crimes are less likely.  Tell me more!
 
 ##### Rush hour rainfall
-Heavy storms during rush hour are the worst.  Dive into rainfall data specifically on those days.
+Heavy storms during rush hour are the worst.  Dive into rainfall data specifically at those times.
 
 ##### Bike Riders
 If you're a rider, how much rain is too much rain before you decide to wait it out?  How can data nerds provide you with more information to make that determination, and be safer on the roads?
