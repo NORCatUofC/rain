@@ -1,2 +1,2 @@
-nexrad_data/*.tar.gz
+nexrad_data/*.gz
 .ipynb_checkpoints
