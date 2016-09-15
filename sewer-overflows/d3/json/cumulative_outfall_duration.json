@@ -1,0 +1,1225 @@
+[{
+    "Duration": 682260000,
+    "Duration_mins": 11371.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6559825,
+    "lon": -87.6582653,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-10"
+}, {
+    "Duration": 449040000,
+    "Duration_mins": 7484.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.65639,
+    "lon": -87.65444,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-11"
+}, {
+    "Duration": 447600000,
+    "Duration_mins": 7460.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.657699,
+    "lon": -87.633974,
+    "waterway_reach": "Little Cal R (North)",
+    "name": "CDS-12"
+}, {
+    "Duration": 288960000,
+    "Duration_mins": 4816.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6591292,
+    "lon": -87.6188567,
+    "waterway_reach": "Little Cal R (North)",
+    "name": "CDS-14"
+}, {
+    "Duration": 393960000,
+    "Duration_mins": 6566.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6518129,
+    "lon": -87.6231108,
+    "waterway_reach": "Little Cal R (North)",
+    "name": "CDS-15-1"
+}, {
+    "Duration": 44700000,
+    "Duration_mins": 745.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6501553,
+    "lon": -87.6207524,
+    "waterway_reach": "Little Cal R (North)",
+    "name": "CDS-15-2"
+}, {
+    "Duration": 143040000,
+    "Duration_mins": 2384.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6492818,
+    "lon": -87.6117673,
+    "waterway_reach": "Little Cal R (North)",
+    "name": "CDS-17"
+}, {
+    "Duration": 639780000,
+    "Duration_mins": 10663.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6422608,
+    "lon": -87.5830286,
+    "waterway_reach": "Little Cal R (North)",
+    "name": "CDS-18"
+}, {
+    "Duration": 2947140000,
+    "Duration_mins": 49119.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.65194,
+    "lon": -87.70889,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-2"
+}, {
+    "Duration": 2440140000,
+    "Duration_mins": 40669.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6449902,
+    "lon": -87.559662,
+    "waterway_reach": "Cal R",
+    "name": "CDS-20"
+}, {
+    "Duration": 3918600000,
+    "Duration_mins": 65310.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.644252,
+    "lon": -87.55183,
+    "waterway_reach": "Grand Cal R",
+    "name": "CDS-21"
+}, {
+    "Duration": 1038120000,
+    "Duration_mins": 17302.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.644035,
+    "lon": -87.550972,
+    "waterway_reach": "Grand Cal R",
+    "name": "CDS-22"
+}, {
+    "Duration": 134280000,
+    "Duration_mins": 2238.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.637252,
+    "lon": -87.54296,
+    "waterway_reach": "Grand Cal R",
+    "name": "CDS-23"
+}, {
+    "Duration": 485280000,
+    "Duration_mins": 8088.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.637001,
+    "lon": -87.66001,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-39"
+}, {
+    "Duration": 3384300000,
+    "Duration_mins": 56405.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.65147,
+    "lon": -87.69469,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-4"
+}, {
+    "Duration": 294360000,
+    "Duration_mins": 4906.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.629167,
+    "lon": -87.65,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-41"
+}, {
+    "Duration": 462900000,
+    "Duration_mins": 7715.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.629167,
+    "lon": -87.638889,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-42"
+}, {
+    "Duration": 156720000,
+    "Duration_mins": 2612.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.626741,
+    "lon": -87.6344107,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-43"
+}, {
+    "Duration": 193740000,
+    "Duration_mins": 3229.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.622222,
+    "lon": -87.627778,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-45"
+}, {
+    "Duration": 361620000,
+    "Duration_mins": 6027.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.652778,
+    "lon": -87.691667,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-5"
+}, {
+    "Duration": 196920000,
+    "Duration_mins": 3282.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.60735,
+    "lon": -87.59283,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-51"
+}, {
+    "Duration": 134280000,
+    "Duration_mins": 2238.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.5942267,
+    "lon": -87.5501474,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-53"
+}, {
+    "Duration": 474180000,
+    "Duration_mins": 7903.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.58825,
+    "lon": -87.53585,
+    "waterway_reach": "Little Cal R (South)",
+    "name": "CDS-55"
+}, {
+    "Duration": 540720000,
+    "Duration_mins": 9012.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6517185,
+    "lon": -87.6896254,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-6"
+}, {
+    "Duration": 446700000,
+    "Duration_mins": 7445.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.6527264,
+    "lon": -87.6764803,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-7"
+}, {
+    "Duration": 425040000,
+    "Duration_mins": 7084.0,
+    "associated_plant": "02 - Calumet",
+    "lat": 41.652778,
+    "lon": -87.669444,
+    "waterway_reach": "Cal Sag Ch",
+    "name": "CDS-8"
+}, {
+    "Duration": 483720000,
+    "Duration_mins": 8062.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.03806,
+    "lon": -87.88292,
+    "waterway_reach": "DesPlaines Upper",
+    "name": "DS-D01"
+}, {
+    "Duration": 390120000,
+    "Duration_mins": 6502.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0317768,
+    "lon": -87.8779174,
+    "waterway_reach": "DesPlaines Upper",
+    "name": "DS-D02"
+}, {
+    "Duration": 27840000,
+    "Duration_mins": 464.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.01712,
+    "lon": -87.86617,
+    "waterway_reach": "DesPlaines Upper",
+    "name": "DS-D05"
+}, {
+    "Duration": 1788660000,
+    "Duration_mins": 29811.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.01018,
+    "lon": -87.86092,
+    "waterway_reach": "DesPlaines Upper",
+    "name": "DS-D06"
+}, {
+    "Duration": 3415260000,
+    "Duration_mins": 56921.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.995001,
+    "lon": -87.85833,
+    "waterway_reach": "DesPlaines Upper",
+    "name": "DS-D07"
+}, {
+    "Duration": 163020000,
+    "Duration_mins": 2717.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.98556,
+    "lon": -87.85639,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D08"
+}, {
+    "Duration": 2092080000,
+    "Duration_mins": 34868.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.97278,
+    "lon": -87.85556,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D09"
+}, {
+    "Duration": 1201080000,
+    "Duration_mins": 20018.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9628943,
+    "lon": -87.854722,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D10"
+}, {
+    "Duration": 141000000,
+    "Duration_mins": 2350.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9373672,
+    "lon": -87.8494137,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D11"
+}, {
+    "Duration": 79560000,
+    "Duration_mins": 1326.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.95282,
+    "lon": -87.85573,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D12I"
+}, {
+    "Duration": 1451940000,
+    "Duration_mins": 24199.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.943333,
+    "lon": -87.853333,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D13"
+}, {
+    "Duration": 295440000,
+    "Duration_mins": 4924.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.937222,
+    "lon": -87.85,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D14"
+}, {
+    "Duration": 1272060000,
+    "Duration_mins": 21201.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.932778,
+    "lon": -87.848611,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D15"
+}, {
+    "Duration": 361260000,
+    "Duration_mins": 6021.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.929568,
+    "lon": -87.8456033,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D16"
+}, {
+    "Duration": 287940000,
+    "Duration_mins": 4799.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9232593,
+    "lon": -87.8411009,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D17"
+}, {
+    "Duration": 305280000,
+    "Duration_mins": 5088.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.922722,
+    "lon": -87.8400184,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D18"
+}, {
+    "Duration": 496020000,
+    "Duration_mins": 8267.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.90861,
+    "lon": -87.82417,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D19,23"
+}, {
+    "Duration": 31620000,
+    "Duration_mins": 527.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9197473,
+    "lon": -87.8370767,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D20I"
+}, {
+    "Duration": 333060000,
+    "Duration_mins": 5551.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8886338,
+    "lon": -87.8328256,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D21,25"
+}, {
+    "Duration": 1303800000,
+    "Duration_mins": 21730.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.897194,
+    "lon": -87.834655,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D22,24,25"
+}, {
+    "Duration": 351540000,
+    "Duration_mins": 5859.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.88787,
+    "lon": -87.83252,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D26"
+}, {
+    "Duration": 1411620000,
+    "Duration_mins": 23527.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.886254,
+    "lon": -87.833829,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D27I"
+}, {
+    "Duration": 1447440000,
+    "Duration_mins": 24124.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.875,
+    "lon": -87.825,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D28"
+}, {
+    "Duration": 5100720000,
+    "Duration_mins": 85012.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.880002,
+    "lon": -87.827067,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D31"
+}, {
+    "Duration": 1308240000,
+    "Duration_mins": 21804.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.903928,
+    "lon": -87.831898,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D32"
+}, {
+    "Duration": 376680000,
+    "Duration_mins": 6278.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.864381,
+    "lon": -87.82736,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D33"
+}, {
+    "Duration": 93900000,
+    "Duration_mins": 1565.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.86139,
+    "lon": -87.86778,
+    "waterway_reach": "Addison Cr",
+    "name": "DS-D34-AI"
+}, {
+    "Duration": 367920000,
+    "Duration_mins": 6132.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.84272,
+    "lon": -87.82947,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D35"
+}, {
+    "Duration": 1427880000,
+    "Duration_mins": 23798.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.84275,
+    "lon": -87.82908,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D36"
+}, {
+    "Duration": 1830120000,
+    "Duration_mins": 30502.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.834167,
+    "lon": -87.845833,
+    "waterway_reach": "Salt Cr",
+    "name": "DS-D37,38"
+}, {
+    "Duration": 1906680000,
+    "Duration_mins": 31778.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.82277,
+    "lon": -87.8413,
+    "waterway_reach": "Salt Cr",
+    "name": "DS-D39,42,46"
+}, {
+    "Duration": 900000,
+    "Duration_mins": 15.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.83157,
+    "lon": -87.84358,
+    "waterway_reach": "Salt Cr",
+    "name": "DS-D40"
+}, {
+    "Duration": 1882860000,
+    "Duration_mins": 31381.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8211169,
+    "lon": -87.8102344,
+    "waterway_reach": "DesPlaines Lower",
+    "name": "DS-D41"
+}, {
+    "Duration": 3998220000,
+    "Duration_mins": 66637.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8253273,
+    "lon": -87.8153523,
+    "waterway_reach": "DesPlaines Lower",
+    "name": "DS-D44,45"
+}, {
+    "Duration": 2691540000,
+    "Duration_mins": 44859.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.82057,
+    "lon": -87.8402,
+    "waterway_reach": "Salt Cr",
+    "name": "DS-D47,50,51"
+}, {
+    "Duration": 200280000,
+    "Duration_mins": 3338.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.81917,
+    "lon": -87.83778,
+    "waterway_reach": "Salt Cr",
+    "name": "DS-D47,50,51 & DS-13A-1"
+}, {
+    "Duration": 1227960000,
+    "Duration_mins": 20466.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8189729,
+    "lon": -87.807884,
+    "waterway_reach": "DesPlaines Lower",
+    "name": "DS-D48"
+}, {
+    "Duration": 1144020000,
+    "Duration_mins": 19067.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.820278,
+    "lon": -87.811111,
+    "waterway_reach": "DesPlaines Lower",
+    "name": "DS-D49"
+}, {
+    "Duration": 1087740000,
+    "Duration_mins": 18129.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.90092,
+    "lon": -87.83415,
+    "waterway_reach": "DesPlaines Middle",
+    "name": "DS-D52"
+}, {
+    "Duration": 412200000,
+    "Duration_mins": 6870.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8313531,
+    "lon": -87.8399978,
+    "waterway_reach": "Salt Cr",
+    "name": "DS-D62"
+}, {
+    "Duration": 4380000,
+    "Duration_mins": 73.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8278769,
+    "lon": -87.8260287,
+    "waterway_reach": "DesPlaines Lower",
+    "name": "DS-D66"
+}, {
+    "Duration": 3960000,
+    "Duration_mins": 66.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9687903,
+    "lon": -87.7016406,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-LAT"
+}, {
+    "Duration": 3344760000,
+    "Duration_mins": 55746.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.77056,
+    "lon": -87.83667,
+    "waterway_reach": "CSSC Lower (SWRP)",
+    "name": "DS-M03"
+}, {
+    "Duration": 3237960000,
+    "Duration_mins": 53966.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8050663,
+    "lon": -87.7877453,
+    "waterway_reach": "CSSC Lower (SWRP)",
+    "name": "DS-M08"
+}, {
+    "Duration": 2634540000,
+    "Duration_mins": 43909.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.806389,
+    "lon": -87.788889,
+    "waterway_reach": "CSSC Lower (SWRP)",
+    "name": "DS-M09"
+}, {
+    "Duration": 2925300000,
+    "Duration_mins": 48755.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.80972,
+    "lon": -87.77611,
+    "waterway_reach": "CSSC Lower (SWRP)",
+    "name": "DS-M10"
+}, {
+    "Duration": 426060000,
+    "Duration_mins": 7101.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.022181,
+    "lon": -87.709914,
+    "waterway_reach": "NSC Lower (NSWRP)",
+    "name": "DS-M101"
+}, {
+    "Duration": 1086900000,
+    "Duration_mins": 18115.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0334677,
+    "lon": -87.7101476,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M104"
+}, {
+    "Duration": 284820000,
+    "Duration_mins": 4747.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0334534,
+    "lon": -87.7095346,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M104E"
+}, {
+    "Duration": 2436000000,
+    "Duration_mins": 40600.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.04273,
+    "lon": -87.70992,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M105W"
+}, {
+    "Duration": 2122200000,
+    "Duration_mins": 35370.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.04417,
+    "lon": -87.70944,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M106E"
+}, {
+    "Duration": 82800000,
+    "Duration_mins": 1380.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.05889,
+    "lon": -87.695001,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M109N"
+}, {
+    "Duration": 299580000,
+    "Duration_mins": 4993.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.058753,
+    "lon": -87.695964,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M109S"
+}, {
+    "Duration": 7578060000,
+    "Duration_mins": 126301.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8167018,
+    "lon": -87.7536658,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "DS-M11"
+}, {
+    "Duration": 55680000,
+    "Duration_mins": 928.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.07528,
+    "lon": -87.68528,
+    "waterway_reach": "NSC Upper (NSWRP)",
+    "name": "DS-M114N"
+}, {
+    "Duration": 715320000,
+    "Duration_mins": 11922.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.81694,
+    "lon": -87.75278,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "DS-M13"
+}, {
+    "Duration": 4424160000,
+    "Duration_mins": 73736.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8217483,
+    "lon": -87.7375236,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "DS-M15"
+}, {
+    "Duration": 611400000,
+    "Duration_mins": 10190.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8342851,
+    "lon": -87.6953706,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "DS-M19"
+}, {
+    "Duration": 3609840000,
+    "Duration_mins": 60164.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8369964,
+    "lon": -87.6890033,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "DS-M20"
+}, {
+    "Duration": 634200000,
+    "Duration_mins": 10570.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8374237,
+    "lon": -87.6853578,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "DS-M21"
+}, {
+    "Duration": 1415160000,
+    "Duration_mins": 23586.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.844914,
+    "lon": -87.6682587,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M25"
+}, {
+    "Duration": 313620000,
+    "Duration_mins": 5227.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.825519,
+    "lon": -87.6582267,
+    "waterway_reach": "SF SB Chicago R",
+    "name": "DS-M26"
+}, {
+    "Duration": 820500000,
+    "Duration_mins": 13675.0,
+    "associated_plant": "06 - Pumping Station - Racine Avenue",
+    "lat": 41.82556,
+    "lon": -87.65833,
+    "waterway_reach": "SF SB Chicago R",
+    "name": "DS-M27,DS-M28,& DS-M29 (RAPS)"
+}, {
+    "Duration": 1279800000,
+    "Duration_mins": 21330.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8306361,
+    "lon": -87.6575894,
+    "waterway_reach": "SF SB Chicago R",
+    "name": "DS-M30"
+}, {
+    "Duration": 632580000,
+    "Duration_mins": 10543.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8497284,
+    "lon": -87.6450959,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M38"
+}, {
+    "Duration": 454440000,
+    "Duration_mins": 7574.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8503798,
+    "lon": -87.6417926,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M40"
+}, {
+    "Duration": 1320000,
+    "Duration_mins": 22.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8542618,
+    "lon": -87.6388724,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M41"
+}, {
+    "Duration": 400260000,
+    "Duration_mins": 6671.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8637734,
+    "lon": -87.6342612,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M45"
+}, {
+    "Duration": 468600000,
+    "Duration_mins": 7810.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8649525,
+    "lon": -87.6350256,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M47"
+}, {
+    "Duration": 430980000,
+    "Duration_mins": 7183.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.867205,
+    "lon": -87.6350381,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M49"
+}, {
+    "Duration": 337920000,
+    "Duration_mins": 5632.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8743449,
+    "lon": -87.6363224,
+    "waterway_reach": "SB Chicago R",
+    "name": "DS-M51"
+}, {
+    "Duration": 291960000,
+    "Duration_mins": 4866.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8870897,
+    "lon": -87.6353106,
+    "waterway_reach": "Chicago R",
+    "name": "DS-M54"
+}, {
+    "Duration": 565560000,
+    "Duration_mins": 9426.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8868378,
+    "lon": -87.6392046,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M61A"
+}, {
+    "Duration": 407460000,
+    "Duration_mins": 6791.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9014525,
+    "lon": -87.6564149,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M64"
+}, {
+    "Duration": 2441640000,
+    "Duration_mins": 40694.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9071287,
+    "lon": -87.6582622,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M66"
+}, {
+    "Duration": 431880000,
+    "Duration_mins": 7198.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9106207,
+    "lon": -87.6563794,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M70"
+}, {
+    "Duration": 1361940000,
+    "Duration_mins": 22699.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9187047,
+    "lon": -87.665756,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M73"
+}, {
+    "Duration": 567000000,
+    "Duration_mins": 9450.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9248653,
+    "lon": -87.6741427,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M75"
+}, {
+    "Duration": 101100000,
+    "Duration_mins": 1685.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9250322,
+    "lon": -87.6748012,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M76"
+}, {
+    "Duration": 3766560000,
+    "Duration_mins": 62776.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9322349,
+    "lon": -87.6831703,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M79"
+}, {
+    "Duration": 919380000,
+    "Duration_mins": 15323.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9338368,
+    "lon": -87.6831949,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M80"
+}, {
+    "Duration": 1878900000,
+    "Duration_mins": 31315.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9392627,
+    "lon": -87.6927329,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M82"
+}, {
+    "Duration": 105240000,
+    "Duration_mins": 1754.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9404909,
+    "lon": -87.6933554,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M83"
+}, {
+    "Duration": 1556940000,
+    "Duration_mins": 25949.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9427895,
+    "lon": -87.6956026,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M84"
+}, {
+    "Duration": 399120000,
+    "Duration_mins": 6652.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9464949,
+    "lon": -87.69577,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M85"
+}, {
+    "Duration": 349620000,
+    "Duration_mins": 5827.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9501867,
+    "lon": -87.6970808,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M86"
+}, {
+    "Duration": 1045080000,
+    "Duration_mins": 17418.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9574809,
+    "lon": -87.6945644,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M88"
+}, {
+    "Duration": 144660000,
+    "Duration_mins": 2411.0,
+    "associated_plant": "07 - Pumping Station - North Branch",
+    "lat": 41.96917,
+    "lon": -87.70111,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "DS-M90 & DS-M91 (NBPS)"
+}, {
+    "Duration": 1285680000,
+    "Duration_mins": 21428.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0042798,
+    "lon": -87.7102367,
+    "waterway_reach": "NSC Lower (NSWRP)",
+    "name": "DS-M97"
+}, {
+    "Duration": 2874840000,
+    "Duration_mins": 47914.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9755183,
+    "lon": -87.7310133,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N02"
+}, {
+    "Duration": 227580000,
+    "Duration_mins": 3793.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9813352,
+    "lon": -87.7412927,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N03"
+}, {
+    "Duration": 684660000,
+    "Duration_mins": 11411.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9837987,
+    "lon": -87.7480379,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N04"
+}, {
+    "Duration": 3737940000,
+    "Duration_mins": 62299.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.983153,
+    "lon": -87.7524896,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N05"
+}, {
+    "Duration": 358980000,
+    "Duration_mins": 5983.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9843238,
+    "lon": -87.7074997,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N06"
+}, {
+    "Duration": 968460000,
+    "Duration_mins": 16141.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9903073,
+    "lon": -87.7661128,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N07"
+}, {
+    "Duration": 2984100000,
+    "Duration_mins": 49735.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9893333,
+    "lon": -87.7712945,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N08"
+}, {
+    "Duration": 287880000,
+    "Duration_mins": 4798.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9921363,
+    "lon": -87.7733599,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N09"
+}, {
+    "Duration": 759060000,
+    "Duration_mins": 12651.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0030184,
+    "lon": -87.7811785,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N10A"
+}, {
+    "Duration": 1302840000,
+    "Duration_mins": 21714.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.999744,
+    "lon": -87.7885191,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N10B"
+}, {
+    "Duration": 110400000,
+    "Duration_mins": 1840.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.00727,
+    "lon": -87.7923,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N11"
+}, {
+    "Duration": 1012260000,
+    "Duration_mins": 16871.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.00858,
+    "lon": -87.79248,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N12"
+}, {
+    "Duration": 879060000,
+    "Duration_mins": 14651.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0121304,
+    "lon": -87.7960441,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N13R"
+}, {
+    "Duration": 166440000,
+    "Duration_mins": 2774.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0199,
+    "lon": -87.79565,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N16"
+}, {
+    "Duration": 687540000,
+    "Duration_mins": 11459.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.03025,
+    "lon": -87.79367,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N17"
+}, {
+    "Duration": 894060000,
+    "Duration_mins": 14901.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.0335,
+    "lon": -87.79458,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N18"
+}, {
+    "Duration": 536700000,
+    "Duration_mins": 8945.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 42.04127,
+    "lon": -87.7882,
+    "waterway_reach": "NBCR Upper (NSC Confluence)",
+    "name": "DS-N19"
+}, {
+    "Duration": 626700000,
+    "Duration_mins": 10445.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.05044,
+    "lon": -87.90872,
+    "waterway_reach": "Weller Cr",
+    "name": "Indirect (UDP-DS5) (K27)"
+}, {
+    "Duration": 452700000,
+    "Duration_mins": 7545.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8720492,
+    "lon": -87.6357999,
+    "waterway_reach": "SB Chicago R",
+    "name": "TG-I32"
+}, {
+    "Duration": 226980000,
+    "Duration_mins": 3783.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8189385,
+    "lon": -87.7439234,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "TG-I5"
+}, {
+    "Duration": 279060000,
+    "Duration_mins": 4651.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8250406,
+    "lon": -87.7242953,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "TG-I8"
+}, {
+    "Duration": 479280000,
+    "Duration_mins": 7988.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8697796,
+    "lon": -87.6345728,
+    "waterway_reach": "SB Chicago R",
+    "name": "TG-I9"
+}, {
+    "Duration": 13380000,
+    "Duration_mins": 223.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.79387,
+    "lon": -87.81453,
+    "waterway_reach": "CSSC Lower (SWRP)",
+    "name": "TG-M05"
+}, {
+    "Duration": 1636140000,
+    "Duration_mins": 27269.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8283942,
+    "lon": -87.7167301,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "TG-M16"
+}, {
+    "Duration": 531120000,
+    "Duration_mins": 8852.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8387731,
+    "lon": -87.6833418,
+    "waterway_reach": "CSSC Upper (SWRP)",
+    "name": "TG-M22"
+}, {
+    "Duration": 271980000,
+    "Duration_mins": 4533.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9106035,
+    "lon": -87.6573189,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "TG-M71"
+}, {
+    "Duration": 279240000,
+    "Duration_mins": 4654.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9363227,
+    "lon": -87.6879717,
+    "waterway_reach": "NBCR Lower (NSC Confluence)",
+    "name": "TG-M81"
+}, {
+    "Duration": 55260000,
+    "Duration_mins": 921.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.9865183,
+    "lon": -87.7076004,
+    "waterway_reach": "NSC Lower (NSWRP)",
+    "name": "TG-M94"
+}, {
+    "Duration": 7200000,
+    "Duration_mins": 120.0,
+    "associated_plant": "01 - Stickney",
+    "lat": 41.8043733,
+    "lon": -87.7896257,
+    "waterway_reach": "CSSC Lower (SWRP)",
+    "name": "TG-NASH"
+}, {
+    "Duration": 486720000,
+    "Duration_mins": 8112.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.06622,
+    "lon": -87.95808,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS1 (K1)"
+}, {
+    "Duration": 1620000,
+    "Duration_mins": 27.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.0662584,
+    "lon": -87.9581275,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS1 (K2-1)"
+}, {
+    "Duration": 1620000,
+    "Duration_mins": 27.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.0662591,
+    "lon": -87.9580936,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS1 (K2-2)"
+}, {
+    "Duration": 317400000,
+    "Duration_mins": 5290.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.06622,
+    "lon": -87.95808,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS1A (K1A)"
+}, {
+    "Duration": 389700000,
+    "Duration_mins": 6495.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.05361,
+    "lon": -87.94639,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS3 (K11)"
+}, {
+    "Duration": 265140000,
+    "Duration_mins": 4419.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.05361,
+    "lon": -87.945,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS3 (K14)"
+}, {
+    "Duration": 46800000,
+    "Duration_mins": 780.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.055,
+    "lon": -87.94083,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS4 (K20)"
+}, {
+    "Duration": 321900000,
+    "Duration_mins": 5365.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.05167,
+    "lon": -87.92833,
+    "waterway_reach": "Weller Cr",
+    "name": "UDP-DS6 (K22)"
+}, {
+    "Duration": 287400000,
+    "Duration_mins": 4790.0,
+    "associated_plant": "04 - Kirie",
+    "lat": 42.07472,
+    "lon": -87.92194,
+    "waterway_reach": "Feehanville Ditch",
+    "name": "UDP-DS8 (K26)"
+}]
