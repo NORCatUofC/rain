@@ -14,7 +14,7 @@
 
  Feel free to add your own question to the list.
 
-4. Look through our 
+4. Look through the directories in the repo, and check out the work that we're up to.
 
 ###Our List of Questions
 
