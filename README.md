@@ -1,17 +1,34 @@
 # Chicago Rain
-### An open-source data science project about rainfall in Chicago
+##### ChicagoRains is an open-source data science project exploring how rainfall affects our city, touching on topics including climate change, public transportation, and the dumping of sewage into Lake Michigan and the Chicago River.  Our team is making this important data more accessible to the public, and engaging with citizen data scientists from across the community to analyze and understand it.  Our aim is to create a localized, data-driven story to raise public awareness in order to facilitate change – whether in public policy,  infrastructure investment,  and/or individual habit.
 
-We are a group of citizen data scientists and storytellers exploring the topic of rainfall in Chicago.  We can see that rain events have a huge impact on our city, including infrastructure failures, pollution of Lake Michigan and the Chicago River, and damage to personal and public property.  The data is out there, and we're interested in an answering questions about the history, geography, and impact to our town.
+### How Do I Get Involved?
 
-### Logistics
-Join our [slack channel](https://chihacknight.slack.com/messages/chicago-rain)
+1. Follow our <a href="https://chihacknight.slack.com/messages/chicago-rain" target="_blank">Slack Channel</a> (<a href="http://slackme.chihacknight.org/" target="_blank">Join our Slack channel</a>)
 
-Our data is currently located on [Google Drive](https://drive.google.com/folderview?id=0B_QE7itsD1z8Qi1BY2RWU1FRaE0&usp=sharing)
+2. Check out our data on <a href="https://drive.google.com/folderview?id=0B_QE7itsD1z8Qi1BY2RWU1FRaE0&usp=sharing" target="_blank">Google Drive</a>
+
+3. Read the list of questions below.  If you're interested in answering or working with others to do so
+ * Hack with us on <a href="https://chihacknight.org" target="_blank">Tuesday nights at the Merchandise Mart at ChiHackNight</a>
+ * Announce it on the <a href="https://chihacknight.slack.com/messages/chicago-rain" target="_blank">Slack Channel</a>
+ * Reach out to @sbeslow or @pjsier
+
+ Feel free to add your own question to the list.
+
+4. Look through our 
+### Our List of Questions
+
+##### Rainfall Distribution
+It can be thunderstorming in one part of the city, and dry in another.
+* Quantify and/or visualize how rainfall falls unevenly around the city -- by region?  ward?  zipcode? neighborhood?
+* What kinds of things does this help us model?
+
+
+
 
 ### How this works
 The directories in this repo distinguish different storylines.  Check them out and see if anything suits your fancy.
 
-Looking for something else?  Here is a brainstorm of some of our ideas.  Feel free to just run with any of this, or connect with the group on our [Slack channel](https://chihacknight.slack.com/messages/chicago-rain) or on [Tuesday nights at ChiHackNight](https://chihacknight.org).  
+
 
 ##### N-year storm
 The Chicago Climate Action plan says that we expect heavier storms due to climate change.  Is this happening?  We are going to attempt to answer this question by focusing on the the n-year event, which is a statistical measurement typically based on historic data denoting the average recurrence interval over an extended period of time.  For example, a 50-year event has a 1/50 chance of occurring in a given year.  For Illinois, the storms are defined in Bulletin 70, located [here](http://www.isws.illinois.edu/atmos/statecli/RF/rf.htm).  This group is currently jamming on data -- mostly in Python.  Come join us.
@@ -19,8 +36,7 @@ The Chicago Climate Action plan says that we expect heavier storms due to climat
 ##### Combined Sewer Overflows
 Build on the work of [istheresewageinthechicagoriver.com](http://istheresewageinthechicagoriver.com) and examine the link between rainfall and the various sewer overfall points.  How much rainfall does it actually take before we start dumping, and where?  How does rain have to fall in order to predict what it takes to cause a CSO?  How often do we dump sewage in Lake Michigan, and how much rain does it take?  This group is currently jamming on data -- mostly in Python.  Come join us.
 
-##### Rainfall Distribution
-How can it be thunderstorming in one part of the city, and dry in another?  When predicting things like basement flooding or combined sewer overflows, geography of the rainfall most certainly matters.  How complete of a dataset can we put together?  How far back can we go?
+
 
 ##### Transportation
 Rainfall affects transit patterns, taxi ridership, divvy demand, and causes that pesky Uber surge pricing.  This team will explore the relationship.
