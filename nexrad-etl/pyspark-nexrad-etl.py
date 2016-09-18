@@ -109,11 +109,9 @@ for feat in chi_zips['features']:
     poly_tuples = [(x[0],x[1]) for x in shapes]
     zip_code = feat['properties']['zip']
     zip_tuples.append((zip_code,poly_tuples))
-
-# zip_fields = [StructField('zip',StringType(),True),
-#               StructField('shape',ArrayType(StringType),True)]
-# zip_schema = StructType(zip_schema)
-# zip_df = sqlContext.createDataFrame(zip_tuples,zip_schema)
+# Convert precip in dBZ into mm/hr using Marshall-Palmer https://en.wikipedia.org/wiki/DBZ_(meteorology)
+def precip_rate(dbz):
+    return pow(pow(10, dbz/10)/200, 0.625)
 
 sc._jsc.hadoopConfiguration().set('fs.s3n.awsAccessKeyId', os.getenv('AWS_ACCESS_KEY_ID'))
 sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SECRET_ACCESS_KEY'))
@@ -127,7 +125,8 @@ s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[1]))
                       ).map(lambda x: (int(x[0]),float(x[1]),float(x[2]),float(x[3]))
                       ).filter(lambda x: in_bbox(x[1],x[2])
                       ).map(lambda x: (x[0],x[1],x[2],x[3],spatial_join_mock(x[1],x[2],zip_tuples))
-                      ).filter(lambda x: x[4] != '')
+                      ).filter(lambda x: x[4] != ''
+                      ).map(lambda x: (x[0],x[1],x[2],precip_rate(x[3]),x[4]))
 
 # Convert to tuple with native Python data types for DataFrame
 nexrad_data_tuples = s3bin_res.map(lambda x: (int(x[0]),float(x[1]),float(x[2]),float(x[3])))
@@ -143,3 +142,5 @@ nexrad_df = sqlContext.createDataFrame(nexrad_data_tuples, nexrad_schema)
 print(nexrad_df.columns)
 print(nexrad_df.count())
 print(nexrad_df.show())
+zip_nexrad_df = nexrad_df.groupBy('zip').agg({'precip':'mean'})
+zip_nexrad_df.show()
