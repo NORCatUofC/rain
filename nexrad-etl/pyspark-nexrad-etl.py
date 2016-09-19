@@ -2,6 +2,7 @@ import os, zlib, re
 import numpy as np
 from numpy import ma
 from io import BytesIO
+from datetime import datetime
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
@@ -12,7 +13,7 @@ sqlContext = SQLContext(sc)
 
 from metpy.io.nexrad import Level2File
 from pyproj import Geod
-import geojson 
+import geojson
 
 # From http://geospatialpython.com/2011/01/point-in-polygon.html
 def point_in_poly(x,y,poly):
@@ -92,6 +93,7 @@ def process_nexrad(fn, f):
     lon,lat,back = g.fwd(center_lon,center_lat,az2D,rng2D)
     # Create timestamp integer for indexing and grouping later
     timestamp_int = int(re.search(r'\d{8}_\d{6}',fn).group().replace('_',''))
+    ts = datetime.strptime(re.search(r'\d{8}_\d{6}',fn).group(), '%Y%m%d_%H%M%S')
     time_arr = np.ones([len(az),len(ref_range)])*timestamp_int
     # Reducing dimensionality into rows of timestamp, lat, lon, and data
     arr_rows = np.dstack((time_arr,lon,lat,data))
@@ -129,7 +131,6 @@ s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[1]))
                       ).map(lambda x: (x[0],x[1],x[2],precip_rate(x[3]),x[4]))
 
 # Convert to tuple with native Python data types for DataFrame
-nexrad_data_tuples = s3bin_res.map(lambda x: (int(x[0]),float(x[1]),float(x[2]),float(x[3])))
 nexrad_fields = [StructField('timestamp',LongType(),True),
                  StructField('lon',FloatType(),True),
                  StructField('lat',FloatType(),True),
@@ -138,9 +139,11 @@ nexrad_fields = [StructField('timestamp',LongType(),True),
 nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
-nexrad_df = sqlContext.createDataFrame(nexrad_data_tuples, nexrad_schema)
-print(nexrad_df.columns)
-print(nexrad_df.count())
+nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
+# print(nexrad_df.columns)
+# print(nexrad_df.count())
 print(nexrad_df.show())
-zip_nexrad_df = nexrad_df.groupBy('zip').agg({'precip':'mean'})
-zip_nexrad_df.show()
+# zip_nexrad_df = nexrad_df.groupBy('zip').agg({'precip':'mean'})
+# zip_nexrad_df.show()
+zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
+print(zip_nexrad_pivot.show())
