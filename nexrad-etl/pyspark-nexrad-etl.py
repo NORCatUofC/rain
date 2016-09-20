@@ -1,4 +1,4 @@
-import os, zlib, re
+import os, zlib, re, time
 import numpy as np
 from numpy import ma
 from io import BytesIO
@@ -91,17 +91,18 @@ def process_nexrad(fn, f):
     az2D = np.ones_like(center_lat)*az[:,None]
     rng2D = np.ones_like(center_lat)*np.transpose(ref_range[:,None])*1000
     lon,lat,back = g.fwd(center_lon,center_lat,az2D,rng2D)
-    # Create timestamp integer for indexing and grouping later
-    timestamp_int = int(re.search(r'\d{8}_\d{6}',fn).group().replace('_',''))
+    # Create timestamp in epoch (without milliseconds) for datetime later
     ts = datetime.strptime(re.search(r'\d{8}_\d{6}',fn).group(), '%Y%m%d_%H%M%S')
-    time_arr = np.ones([len(az),len(ref_range)])*timestamp_int
+    time_epoch = time.mktime(ts.timetuple())
+    ts_arr = np.ones([len(az),len(ref_range)])*time_epoch
     # Reducing dimensionality into rows of timestamp, lat, lon, and data
-    arr_rows = np.dstack((time_arr,lon,lat,data))
+    arr_rows = np.dstack((ts_arr,lon,lat,data))
     arr_simp = arr_rows.reshape(-1,4)
     # Remove any nan values to reduce size
     return arr_simp[~np.isnan(arr_simp).any(1)]
 
 # Loading zips into list of tuples with zip code and MultiPolygon
+# chi_zips.geojson is in data/ folder, features are slightly simplified
 with open('chi_zips.geojson','r') as cg:
     chi_zips = geojson.load(cg)
 
@@ -111,6 +112,7 @@ for feat in chi_zips['features']:
     poly_tuples = [(x[0],x[1]) for x in shapes]
     zip_code = feat['properties']['zip']
     zip_tuples.append((zip_code,poly_tuples))
+
 # Convert precip in dBZ into mm/hr using Marshall-Palmer https://en.wikipedia.org/wiki/DBZ_(meteorology)
 def precip_rate(dbz):
     return pow(pow(10, dbz/10)/200, 0.625)
@@ -124,14 +126,14 @@ s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[1]))
                       ).filter(lambda x: isinstance(x[1],Level2File)
                       ).map(lambda x: process_nexrad(x[0],x[1])
                       ).flatMap(lambda x: x
-                      ).map(lambda x: (int(x[0]),float(x[1]),float(x[2]),float(x[3]))
+                      ).map(lambda x: (datetime.fromtimestamp(x[0]),float(x[1]),float(x[2]),float(x[3]))
                       ).filter(lambda x: in_bbox(x[1],x[2])
                       ).map(lambda x: (x[0],x[1],x[2],x[3],spatial_join_mock(x[1],x[2],zip_tuples))
                       ).filter(lambda x: x[4] != ''
                       ).map(lambda x: (x[0],x[1],x[2],precip_rate(x[3]),x[4]))
 
 # Convert to tuple with native Python data types for DataFrame
-nexrad_fields = [StructField('timestamp',LongType(),True),
+nexrad_fields = [StructField('timestamp',TimestampType(),True),
                  StructField('lon',FloatType(),True),
                  StructField('lat',FloatType(),True),
                  StructField('precip',FloatType(),True),
@@ -140,10 +142,7 @@ nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
-# print(nexrad_df.columns)
-# print(nexrad_df.count())
 print(nexrad_df.show())
-# zip_nexrad_df = nexrad_df.groupBy('zip').agg({'precip':'mean'})
-# zip_nexrad_df.show()
+
 zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
 print(zip_nexrad_pivot.show())
