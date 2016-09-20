@@ -93,7 +93,9 @@ def process_nexrad(fn, f):
     lon,lat,back = g.fwd(center_lon,center_lat,az2D,rng2D)
     # Create timestamp in epoch (without milliseconds) for datetime later
     ts = datetime.strptime(re.search(r'\d{8}_\d{6}',fn).group(), '%Y%m%d_%H%M%S')
-    time_epoch = time.mktime(ts.timetuple())
+    # Get epoch (without milliseconds), subtracting 5 hours to convert from GMT to CST
+    time_epoch = time.mktime(ts.timetuple()) - (5 * 3600)
+
     ts_arr = np.ones([len(az),len(ref_range)])*time_epoch
     # Reducing dimensionality into rows of timestamp, lat, lon, and data
     arr_rows = np.dstack((ts_arr,lon,lat,data))
@@ -146,3 +148,5 @@ print(nexrad_df.show())
 
 zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
 print(zip_nexrad_pivot.show())
+
+zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test.csv')
