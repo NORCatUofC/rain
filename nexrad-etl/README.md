@@ -5,8 +5,9 @@ usable format for multiple projects.
 
 ## Notes
 
-* Running by pulling files from S3 individually takes too long to be practical,
-will need to use Apache Spark with S3 as the dataset and a list of keys including
-"KLOT"
-* Need to generate the list of keys which include "KLOT" because the file structure
-is "YEAR/MONTH/DAY/STATION/FILES"
+* Currently using Apache Spark to read files directly from S3 as byte strings,
+and pass those into MetPy `Level2File` objects.
+* Because the binary format is specific, can't read individual files in chunks,
+but most files are around 2MB and none are bigger than 10MB
+* Example of one row of output (timestamp as index as epoch, columns are zip codes,
+and data is preipitation rate in millimeters per hour) in [data/ex_output_one_row.csv](data/ex_output_one_row.csv)

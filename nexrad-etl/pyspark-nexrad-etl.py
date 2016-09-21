@@ -149,4 +149,5 @@ print(nexrad_df.show())
 zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
 print(zip_nexrad_pivot.show())
 
-zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test.csv')
+# Adding header because pivot makes unclear which shape is what
+zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)
