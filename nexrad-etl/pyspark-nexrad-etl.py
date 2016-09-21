@@ -7,7 +7,7 @@ from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
 
-spark_conf = SparkConf().setAppName('TestNexrad')
+spark_conf = SparkConf().setAppName('NexradETL')
 sc = SparkContext(conf=spark_conf)
 sqlContext = SQLContext(sc)
 
@@ -68,14 +68,19 @@ def process_nexrad(fn, f):
         return np.array([])
 
     # Format for NEXRAD files changed (byte string and index), try for both formats
+    if len(f.sweeps[sweep][0]) > 4:
+        sweep_idx = 4
+        ref_str = b'REF'
+    else:
+        sweep_idx = 1
+        ref_str = 'REF'
+
     try:
-        ref_hdr = f.sweeps[sweep][0][4][b'REF'][0]
+        ref_hdr = f.sweeps[sweep][0][sweep_idx][ref_str][0]
         ref_range = np.arange(ref_hdr.num_gates) * ref_hdr.gate_width + ref_hdr.first_gate
-        ref = np.array([ray[4][b'REF'][1] for ray in f.sweeps[sweep]])
+        ref = np.array([ray[sweep_idx][ref_str][1] for ray in f.sweeps[sweep]])
     except:
-        ref_hdr = f.sweeps[sweep][0][1]['REF'][0]
-        ref_range = np.arange(ref_hdr.num_gates) * ref_hdr.gate_width + ref_hdr.first_gate
-        ref = np.array([ray[1]['REF'][1] for ray in f.sweeps[sweep]])
+        return 0
 
     data_hdr = f.sweeps[sweep][0][1]
     data = ma.array(ref)
@@ -124,9 +129,10 @@ sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SEC
 s3nRdd = sc.binaryFiles('s3n://noaa-nexrad-level2/2006/07/09/KLOT/KLOT20060709_000601.gz')
 
 # Passing tuples through so that filename can be preserved
-s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[1]))
+s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
                       ).filter(lambda x: isinstance(x[1],Level2File)
                       ).map(lambda x: process_nexrad(x[0],x[1])
+                      ).filter(lambda x: isinstance(x, (np.ndarray, np.generic))
                       ).flatMap(lambda x: x
                       ).map(lambda x: (datetime.fromtimestamp(x[0]),float(x[1]),float(x[2]),float(x[3]))
                       ).filter(lambda x: in_bbox(x[1],x[2])
@@ -144,10 +150,6 @@ nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
-print(nexrad_df.show())
-
 zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
-print(zip_nexrad_pivot.show())
-
 # Adding header because pivot makes unclear which shape is what
 zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)
