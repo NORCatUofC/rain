@@ -3,6 +3,7 @@ import numpy as np
 from numpy import ma
 from io import BytesIO
 from datetime import datetime
+import boto3, csv
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
@@ -10,6 +11,21 @@ from pyspark.sql.types import *
 spark_conf = SparkConf().setAppName('NexradETL')
 sc = SparkContext(conf=spark_conf)
 sqlContext = SQLContext(sc)
+
+s3_client = boto3.client('s3',
+                         aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+                         aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'))
+# Read KLOT keys manually
+klot_keys = list()
+with open('clean_klot_keys.csv') as kc:
+    key_reader = csv.reader(kc, delimiter=',')
+    for row in key_reader:
+        klot_keys.append(row[0])
+klot_keys = klot_keys[1:]
+
+def s3_map_func(key):
+    response = s3_client.get_object(Bucket='noaa-nexrad-level2',Key=key)
+    yield response['Body'].read()
 
 from metpy.io.nexrad import Level2File
 from pyproj import Geod
@@ -124,9 +140,11 @@ for feat in chi_zips['features']:
 def precip_rate(dbz):
     return pow(pow(10, dbz/10)/200, 0.625)
 
-sc._jsc.hadoopConfiguration().set('fs.s3n.awsAccessKeyId', os.getenv('AWS_ACCESS_KEY_ID'))
-sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SECRET_ACCESS_KEY'))
-s3nRdd = sc.binaryFiles('s3n://noaa-nexrad-level2/2006/07/09/KLOT/KLOT20060709_000601.gz')
+# sc._jsc.hadoopConfiguration().set('fs.s3n.awsAccessKeyId', os.getenv('AWS_ACCESS_KEY_ID'))
+# sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SECRET_ACCESS_KEY'))
+# s3nRdd = sc.binaryFiles('s3n://noaa-nexrad-level2/2006/07/09/KLOT/KLOT20060709_000601.gz')
+klot_para = sc.parallelize(klot_keys)
+s3nRdd = klot_para.flatMap(s3_map_func)
 
 # Passing tuples through so that filename can be preserved
 s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
