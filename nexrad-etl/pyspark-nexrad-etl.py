@@ -1,9 +1,9 @@
-import os, zlib, re, time
+import os, zlib, re, time, csv
 import numpy as np
 from numpy import ma
 from io import BytesIO
 from datetime import datetime
-import boto3, csv
+from boto.s3.connection import S3Connection
 from pyspark import SparkConf, SparkContext
 from pyspark.sql import SQLContext
 from pyspark.sql.types import *
@@ -12,20 +12,20 @@ spark_conf = SparkConf().setAppName('NexradETL')
 sc = SparkContext(conf=spark_conf)
 sqlContext = SQLContext(sc)
 
-s3_client = boto3.client('s3',
-                         aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
-                         aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'))
+conn = S3Connection(os.getenv('AWS_ACCESS_KEY_ID'),os.getenv('AWS_SECRET_ACCESS_KEY'))
+bucket = conn.get_bucket('noaa-nexrad-level2')
+
 # Read KLOT keys manually
 klot_keys = list()
-with open('clean_klot_keys.csv') as kc:
+with open('clean_klot_keys.csv','r') as kc:
     key_reader = csv.reader(kc, delimiter=',')
     for row in key_reader:
         klot_keys.append(row[0])
 klot_keys = klot_keys[1:]
+klot_keys = [bucket.get_key(k) for k in klot_keys]
 
 def s3_map_func(key):
-    response = s3_client.get_object(Bucket='noaa-nexrad-level2',Key=key)
-    yield response['Body'].read()
+    yield (key.name, key.get_contents_as_string())
 
 from metpy.io.nexrad import Level2File
 from pyproj import Geod
