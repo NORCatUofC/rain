@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Combined Sewer Overflows</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+
+</head>
+
+<body>
+
+    <style>
+        #theMap {
+            height: 450px;
+        }
+    </style>
+
+    <div class="container">
+        <div id="theMap"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="js/jquery-csv.js"></script>
+    <script src="js/cumulativeCsos.js"></script>
+
+    <script>
+        // Handler for .ready() called.
+
+        var mymap = L.map('theMap').setView([41.8801, -87.6268], 10);
+
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+            maxZoom: 18,
+            id: 'scottbeslow.1f2iop7n',
+            accessToken: 'pk.eyJ1Ijoic2NvdHRiZXNsb3ciLCJhIjoiZ3J0aHNYZyJ9.J2pdf4MyW3Y-etg6Je5PXw'
+        }).addTo(mymap);
+
+        $.ajax({
+            url: "data/outfall_points.csv",
+            async: false,
+            success: function (csvd) {
+                var data = $.csv.toObjects(csvd);
+                alert(JSON.stringify(data));
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                alert('request failed');
+            },
+            dataType: "text",
+
+        });
+
+    </script>
+
+</body>
+
+</html>
