@@ -122,7 +122,9 @@ def process_nexrad(fn, f):
     arr_rows = np.dstack((ts_arr,lon,lat,data))
     arr_simp = arr_rows.reshape(-1,4)
     # Remove any nan values to reduce size
-    return arr_simp[~np.isnan(arr_simp).any(1)]
+    arr_simp = arr_simp[~np.isnan(arr_simp).any(1)]
+    # Remove any rows where dBZ is too low to be significant (less than 15)
+    return arr_simp[np.where(arr_simp[:,3]>15.0)]
 
 # Loading zips into list of tuples with zip code and MultiPolygon
 # chi_zips.geojson is in data/ folder, features are slightly simplified
@@ -168,6 +170,7 @@ nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
-zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
+zip_list = [z[0] for z in zip_tuples]
+zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip', zip_list).mean('precip')
 # Adding header because pivot makes unclear which shape is what
 zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)
