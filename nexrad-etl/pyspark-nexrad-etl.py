@@ -81,7 +81,7 @@ def process_nexrad(fn, f):
     try:
         az = np.array([ray[0].az_angle for ray in f.sweeps[sweep]])
     except:
-        return np.array([])
+        return 0
 
     # Format for NEXRAD files changed (byte string and index), try for both formats
     if len(f.sweeps[sweep][0]) > 4:
@@ -144,7 +144,7 @@ def precip_rate(dbz):
 # sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SECRET_ACCESS_KEY'))
 # s3nRdd = sc.binaryFiles('s3n://noaa-nexrad-level2/2006/07/09/KLOT/KLOT20060709_000601.gz')
 klot_para = sc.parallelize(klot_keys)
-s3nRdd = klot_para.flatMap(s3_map_func)
+s3nRdd = klot_para.flatMap(s3_map_func).repartition(200)
 
 # Passing tuples through so that filename can be preserved
 s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
