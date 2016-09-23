@@ -81,7 +81,7 @@ def process_nexrad(fn, f):
     try:
         az = np.array([ray[0].az_angle for ray in f.sweeps[sweep]])
     except:
-        return np.array([])
+        return 0
 
     # Format for NEXRAD files changed (byte string and index), try for both formats
     if len(f.sweeps[sweep][0]) > 4:
@@ -122,7 +122,9 @@ def process_nexrad(fn, f):
     arr_rows = np.dstack((ts_arr,lon,lat,data))
     arr_simp = arr_rows.reshape(-1,4)
     # Remove any nan values to reduce size
-    return arr_simp[~np.isnan(arr_simp).any(1)]
+    arr_simp = arr_simp[~np.isnan(arr_simp).any(1)]
+    # Remove any rows where dBZ is too low to be significant (less than 15)
+    return arr_simp[np.where(arr_simp[:,3]>15.0)]
 
 # Loading zips into list of tuples with zip code and MultiPolygon
 # chi_zips.geojson is in data/ folder, features are slightly simplified
@@ -144,7 +146,7 @@ def precip_rate(dbz):
 # sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SECRET_ACCESS_KEY'))
 # s3nRdd = sc.binaryFiles('s3n://noaa-nexrad-level2/2006/07/09/KLOT/KLOT20060709_000601.gz')
 klot_para = sc.parallelize(klot_keys)
-s3nRdd = klot_para.flatMap(s3_map_func)
+s3nRdd = klot_para.flatMap(s3_map_func).repartition(200)
 
 # Passing tuples through so that filename can be preserved
 s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
@@ -168,6 +170,7 @@ nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
-zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip').mean('precip')
+zip_list = [z[0] for z in zip_tuples]
+zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip', zip_list).mean('precip')
 # Adding header because pivot makes unclear which shape is what
 zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)
