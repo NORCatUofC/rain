@@ -1,0 +1,189 @@
+outfall_name,associated_plant,lat,lon,waterway_reach
+18E-PS,02 - Calumet,41.65194,-87.71944,Cal Sag Ch
+CDS-10,02 - Calumet,41.6559825,-87.6582653,Cal Sag Ch
+CDS-11,02 - Calumet,41.65639,-87.65444,Cal Sag Ch
+CDS-12,02 - Calumet,41.657699,-87.633974,Little Cal R (North)
+CDS-13,02 - Calumet,41.66222,-87.61889,Little Cal R (North)
+CDS-14,02 - Calumet,41.6591292,-87.6188567,Little Cal R (North)
+CDS-15-1,02 - Calumet,41.6518129,-87.6231108,Little Cal R (North)
+CDS-15-2,02 - Calumet,41.6501553,-87.6207524,Little Cal R (North)
+CDS-15-3,02 - Calumet,41.6504565,-87.6215601,Little Cal R (North)
+CDS-15-4,02 - Calumet,41.6500492,-87.6200119,Little Cal R (North)
+CDS-15-5,02 - Calumet,41.6498377,-87.6169755,Little Cal R (North)
+CDS-16,02 - Calumet,41.6503313,-87.6105735,Little Cal R (North)
+CDS-17,02 - Calumet,41.6492818,-87.6117673,Little Cal R (North)
+CDS-18,02 - Calumet,41.6422608,-87.5830286,Little Cal R (North)
+CDS-2,02 - Calumet,41.65194,-87.70889,Cal Sag Ch
+CDS-20,02 - Calumet,41.6449902,-87.559662,Cal R
+CDS-21,02 - Calumet,41.644252,-87.55183,Grand Cal R
+CDS-22,02 - Calumet,41.644035,-87.550972,Grand Cal R
+CDS-23,02 - Calumet,41.637252,-87.54296,Grand Cal R
+CDS-28,02 - Calumet,41.67444,-87.55056,Cal R
+CDS-34,02 - Calumet,41.72417,-87.54639,Cal R
+CDS-39,02 - Calumet,41.637001,-87.66001,Little Cal R (South)
+CDS-4,02 - Calumet,41.65147,-87.69469,Cal Sag Ch
+CDS-41,02 - Calumet,41.629167,-87.65,Little Cal R (South)
+CDS-42,02 - Calumet,41.629167,-87.638889,Little Cal R (South)
+CDS-43,02 - Calumet,41.626741,-87.6344107,Little Cal R (South)
+CDS-45,02 - Calumet,41.622222,-87.627778,Little Cal R (South)
+CDS-48,02 - Calumet,41.6139728,-87.6128625,Little Cal R (South)
+CDS-5,02 - Calumet,41.652778,-87.691667,Cal Sag Ch
+CDS-51,02 - Calumet,41.60735,-87.59283,Little Cal R (South)
+CDS-53,02 - Calumet,41.5942267,-87.5501474,Little Cal R (South)
+CDS-55,02 - Calumet,41.58825,-87.53585,Little Cal R (South)
+CDS-57,02 - Calumet,41.597001,-87.66555,Cal Union Drainage Ditch
+CDS-6,02 - Calumet,41.6517185,-87.6896254,Cal Sag Ch
+CDS-7,02 - Calumet,41.6527264,-87.6764803,Cal Sag Ch
+CDS-8,02 - Calumet,41.652778,-87.669444,Cal Sag Ch
+CDS-C-1,02 - Calumet,41.6075,-87.6075,Little Cal R (South)
+D43,01 - Stickney,41.8258983,-87.8196161,DesPlaines Lower
+DS-13A-4 (TG137),01 - Stickney,41.808333,-87.811111,DesPlaines Upper
+DS-D01,01 - Stickney,42.03806,-87.88292,DesPlaines Upper
+DS-D02,01 - Stickney,42.0317768,-87.8779174,DesPlaines Upper
+DS-D03R,01 - Stickney,42.02267,-87.87475,DesPlaines Upper
+DS-D05,01 - Stickney,42.01712,-87.86617,DesPlaines Upper
+DS-D06,01 - Stickney,42.01018,-87.86092,DesPlaines Upper
+DS-D07,01 - Stickney,41.995001,-87.85833,DesPlaines Upper
+DS-D08,01 - Stickney,41.98556,-87.85639,DesPlaines Middle
+DS-D09,01 - Stickney,41.97278,-87.85556,DesPlaines Middle
+DS-D10,01 - Stickney,41.9628943,-87.854722,DesPlaines Middle
+DS-D11,01 - Stickney,41.9373672,-87.8494137,DesPlaines Middle
+DS-D12I,01 - Stickney,41.95282,-87.85573,DesPlaines Middle
+DS-D13,01 - Stickney,41.943333,-87.853333,DesPlaines Middle
+DS-D14,01 - Stickney,41.937222,-87.85,DesPlaines Middle
+DS-D15,01 - Stickney,41.932778,-87.848611,DesPlaines Middle
+DS-D16,01 - Stickney,41.929568,-87.8456033,DesPlaines Middle
+DS-D17,01 - Stickney,41.9232593,-87.8411009,DesPlaines Middle
+DS-D18,01 - Stickney,41.922722,-87.8400184,DesPlaines Middle
+"DS-D19,23",01 - Stickney,41.90861,-87.82417,DesPlaines Middle
+DS-D20I,01 - Stickney,41.9197473,-87.8370767,DesPlaines Middle
+"DS-D21,25",01 - Stickney,41.8886338,-87.8328256,DesPlaines Middle
+"DS-D22,24,25",01 - Stickney,41.897194,-87.834655,DesPlaines Middle
+DS-D26,01 - Stickney,41.88787,-87.83252,DesPlaines Middle
+DS-D27I,01 - Stickney,41.886254,-87.833829,DesPlaines Middle
+DS-D28,01 - Stickney,41.875,-87.825,DesPlaines Middle
+"DS-D29,64",01 - Stickney,41.87932,-87.82692,DesPlaines Middle
+"DS-D30,28",01 - Stickney,41.864444,-87.826944,DesPlaines Middle
+DS-D31,01 - Stickney,41.880002,-87.827067,DesPlaines Middle
+DS-D32,01 - Stickney,41.903928,-87.831898,DesPlaines Middle
+DS-D33,01 - Stickney,41.864381,-87.82736,DesPlaines Middle
+DS-D34-AI,01 - Stickney,41.86139,-87.86778,Addison Cr
+DS-D35,01 - Stickney,41.84272,-87.82947,DesPlaines Middle
+DS-D36,01 - Stickney,41.84275,-87.82908,DesPlaines Middle
+"DS-D37,38",01 - Stickney,41.834167,-87.845833,Salt Cr
+"DS-D39,42,46",01 - Stickney,41.82277,-87.8413,Salt Cr
+DS-D40,01 - Stickney,41.83157,-87.84358,Salt Cr
+DS-D41,01 - Stickney,41.8211169,-87.8102344,DesPlaines Lower
+"DS-D44,45",01 - Stickney,41.8253273,-87.8153523,DesPlaines Lower
+"DS-D47,50,51",01 - Stickney,41.82057,-87.8402,Salt Cr
+"DS-D47,50,51 & DS-13A-1",01 - Stickney,41.81917,-87.83778,Salt Cr
+DS-D48,01 - Stickney,41.8189729,-87.807884,DesPlaines Lower
+DS-D49,01 - Stickney,41.820278,-87.811111,DesPlaines Lower
+DS-D52,01 - Stickney,41.90092,-87.83415,DesPlaines Middle
+DS-D62,01 - Stickney,41.8313531,-87.8399978,Salt Cr
+DS-D63,01 - Stickney,41.89361,-87.83306,DesPlaines Middle
+DS-D66,01 - Stickney,41.8278769,-87.8260287,DesPlaines Lower
+DS-LAT,01 - Stickney,41.9687903,-87.7016406,NBCR Lower (NSC Confluence)
+DS-M03,01 - Stickney,41.77056,-87.83667,CSSC Lower (SWRP)
+DS-M08,01 - Stickney,41.8050663,-87.7877453,CSSC Lower (SWRP)
+DS-M09,01 - Stickney,41.806389,-87.788889,CSSC Lower (SWRP)
+DS-M10,01 - Stickney,41.80972,-87.77611,CSSC Lower (SWRP)
+DS-M100,01 - Stickney,42.01917,-87.71056,NSC Lower (NSWRP)
+DS-M101,01 - Stickney,42.022181,-87.709914,NSC Lower (NSWRP)
+DS-M104,01 - Stickney,42.0334677,-87.7101476,NSC Upper (NSWRP)
+DS-M104E,01 - Stickney,42.0334534,-87.7095346,NSC Upper (NSWRP)
+DS-M105W,01 - Stickney,42.04273,-87.70992,NSC Upper (NSWRP)
+DS-M106E,01 - Stickney,42.04417,-87.70944,NSC Upper (NSWRP)
+DS-M107-1,01 - Stickney,42.0518524,-87.7088887,NSC Upper (NSWRP)
+DS-M107-2,01 - Stickney,42.051722,-87.708211,NSC Upper (NSWRP)
+DS-M109N,01 - Stickney,42.05889,-87.695001,NSC Upper (NSWRP)
+DS-M109S,01 - Stickney,42.058753,-87.695964,NSC Upper (NSWRP)
+DS-M11,01 - Stickney,41.8167018,-87.7536658,CSSC Upper (SWRP)
+DS-M114N,01 - Stickney,42.07528,-87.68528,NSC Upper (NSWRP)
+DS-M114N-2,01 - Stickney,42.0751969,-87.6854976,NSC Upper (NSWRP)
+DS-M12,01 - Stickney,41.8160434,-87.75338,CSSC Upper (SWRP)
+DS-M13,01 - Stickney,41.81694,-87.75278,CSSC Upper (SWRP)
+DS-M15,01 - Stickney,41.8217483,-87.7375236,CSSC Upper (SWRP)
+DS-M17,01 - Stickney,41.8312029,-87.7048632,CSSC Upper (SWRP)
+DS-M19,01 - Stickney,41.8342851,-87.6953706,CSSC Upper (SWRP)
+DS-M20,01 - Stickney,41.8369964,-87.6890033,CSSC Upper (SWRP)
+DS-M21,01 - Stickney,41.8374237,-87.6853578,CSSC Upper (SWRP)
+DS-M25,01 - Stickney,41.844914,-87.6682587,SB Chicago R
+DS-M26,01 - Stickney,41.825519,-87.6582267,SF SB Chicago R
+"DS-M27,DS-M28,& DS-M29 (RAPS)",06 - Pumping Station - Racine Avenue,41.82556,-87.65833,SF SB Chicago R
+DS-M30,01 - Stickney,41.8306361,-87.6575894,SF SB Chicago R
+DS-M35,01 - Stickney,41.8449075,-87.6635521,SB Chicago R
+DS-M38,01 - Stickney,41.8497284,-87.6450959,SB Chicago R
+DS-M40,01 - Stickney,41.8503798,-87.6417926,SB Chicago R
+DS-M41,01 - Stickney,41.8542618,-87.6388724,SB Chicago R
+DS-M45,01 - Stickney,41.8637734,-87.6342612,SB Chicago R
+DS-M47,01 - Stickney,41.8649525,-87.6350256,SB Chicago R
+DS-M49,01 - Stickney,41.867205,-87.6350381,SB Chicago R
+DS-M51,01 - Stickney,41.8743449,-87.6363224,SB Chicago R
+DS-M52,01 - Stickney,41.8786949,-87.6375889,SB Chicago R
+DS-M54,01 - Stickney,41.8870897,-87.6353106,Chicago R
+DS-M55,01 - Stickney,41.8885316,-87.6239777,Chicago R
+DS-M61A,01 - Stickney,41.8868378,-87.6392046,NBCR Lower (NSC Confluence)
+DS-M64,01 - Stickney,41.9014525,-87.6564149,NBCR Lower (NSC Confluence)
+DS-M66,01 - Stickney,41.9071287,-87.6582622,NBCR Lower (NSC Confluence)
+DS-M70,01 - Stickney,41.9106207,-87.6563794,NBCR Lower (NSC Confluence)
+DS-M73,01 - Stickney,41.9187047,-87.665756,NBCR Lower (NSC Confluence)
+DS-M75,01 - Stickney,41.9248653,-87.6741427,NBCR Lower (NSC Confluence)
+DS-M76,01 - Stickney,41.9250322,-87.6748012,NBCR Lower (NSC Confluence)
+DS-M79,01 - Stickney,41.9322349,-87.6831703,NBCR Lower (NSC Confluence)
+DS-M80,01 - Stickney,41.9338368,-87.6831949,NBCR Lower (NSC Confluence)
+DS-M82,01 - Stickney,41.9392627,-87.6927329,NBCR Lower (NSC Confluence)
+DS-M83,01 - Stickney,41.9404909,-87.6933554,NBCR Lower (NSC Confluence)
+DS-M84,01 - Stickney,41.9427895,-87.6956026,NBCR Lower (NSC Confluence)
+DS-M85,01 - Stickney,41.9464949,-87.69577,NBCR Lower (NSC Confluence)
+DS-M86,01 - Stickney,41.9501867,-87.6970808,NBCR Lower (NSC Confluence)
+DS-M88,01 - Stickney,41.9574809,-87.6945644,NBCR Lower (NSC Confluence)
+DS-M90 & DS-M91 (NBPS),07 - Pumping Station - North Branch,41.96917,-87.70111,NBCR Lower (NSC Confluence)
+DS-M97,01 - Stickney,42.0042798,-87.7102367,NSC Lower (NSWRP)
+DS-N02,01 - Stickney,41.9755183,-87.7310133,NBCR Upper (NSC Confluence)
+DS-N03,01 - Stickney,41.9813352,-87.7412927,NBCR Upper (NSC Confluence)
+DS-N04,01 - Stickney,41.9837987,-87.7480379,NBCR Upper (NSC Confluence)
+DS-N05,01 - Stickney,41.983153,-87.7524896,NBCR Upper (NSC Confluence)
+DS-N06,01 - Stickney,41.9843238,-87.7074997,NBCR Upper (NSC Confluence)
+DS-N07,01 - Stickney,41.9903073,-87.7661128,NBCR Upper (NSC Confluence)
+DS-N08,01 - Stickney,41.9893333,-87.7712945,NBCR Upper (NSC Confluence)
+DS-N09,01 - Stickney,41.9921363,-87.7733599,NBCR Upper (NSC Confluence)
+DS-N10A,01 - Stickney,42.0030184,-87.7811785,NBCR Upper (NSC Confluence)
+DS-N10B,01 - Stickney,41.999744,-87.7885191,NBCR Upper (NSC Confluence)
+DS-N11,01 - Stickney,42.00727,-87.7923,NBCR Upper (NSC Confluence)
+DS-N12,01 - Stickney,42.00858,-87.79248,NBCR Upper (NSC Confluence)
+DS-N13R,01 - Stickney,42.0121304,-87.7960441,NBCR Upper (NSC Confluence)
+DS-N16,01 - Stickney,42.0199,-87.79565,NBCR Upper (NSC Confluence)
+DS-N17,01 - Stickney,42.03025,-87.79367,NBCR Upper (NSC Confluence)
+DS-N18,01 - Stickney,42.0335,-87.79458,NBCR Upper (NSC Confluence)
+DS-N19,01 - Stickney,42.04127,-87.7882,NBCR Upper (NSC Confluence)
+DSM-38,01 - Stickney,41.8497284,-87.6450959,SB Chicago R
+Indirect (CDS-47),02 - Calumet,41.6174419,-87.6188114,Little Cal R (South)
+Indirect (UDP-DS5) (K27),04 - Kirie,42.05044,-87.90872,Weller Cr
+None,02 - Calumet,41.6666949,-87.7580073,Cal Sag Ch
+None (K3),04 - Kirie,42.0590543,-87.9569232,Weller Cr
+TG-13A,01 - Stickney,41.79389,-87.81194,CSSC Upper (SWRP)
+TG-I32,01 - Stickney,41.8720492,-87.6357999,SB Chicago R
+TG-I5,01 - Stickney,41.8189385,-87.7439234,CSSC Upper (SWRP)
+TG-I8,01 - Stickney,41.8250406,-87.7242953,CSSC Upper (SWRP)
+TG-I9,01 - Stickney,41.8697796,-87.6345728,SB Chicago R
+TG-M05,01 - Stickney,41.79387,-87.81453,CSSC Lower (SWRP)
+TG-M105E,01 - Stickney,42.037407,-87.709431,NSC Upper (NSWRP)
+TG-M16,01 - Stickney,41.8283942,-87.7167301,CSSC Upper (SWRP)
+TG-M22,01 - Stickney,41.8387731,-87.6833418,CSSC Upper (SWRP)
+TG-M60,01 - Stickney,41.8889669,-87.6215276,Chicago R
+TG-M71,01 - Stickney,41.9106035,-87.6573189,NBCR Lower (NSC Confluence)
+TG-M81,01 - Stickney,41.9363227,-87.6879717,NBCR Lower (NSC Confluence)
+TG-M94,01 - Stickney,41.9865183,-87.7076004,NSC Lower (NSWRP)
+TG-NASH,01 - Stickney,41.8043733,-87.7896257,CSSC Lower (SWRP)
+UDP-DS1 (K1),04 - Kirie,42.06622,-87.95808,Weller Cr
+UDP-DS1 (K2-1),04 - Kirie,42.0662584,-87.9581275,Weller Cr
+UDP-DS1 (K2-2),04 - Kirie,42.0662591,-87.9580936,Weller Cr
+UDP-DS1A (K1A),04 - Kirie,42.06622,-87.95808,Weller Cr
+UDP-DS3 (K11),04 - Kirie,42.05361,-87.94639,Weller Cr
+UDP-DS3 (K14),04 - Kirie,42.05361,-87.945,Weller Cr
+UDP-DS4 (K20),04 - Kirie,42.055,-87.94083,Weller Cr
+UDP-DS6 (K22),04 - Kirie,42.05167,-87.92833,Weller Cr
+UDP-DS8 (K25-1),04 - Kirie,42.0751772,-87.922144,Feehanville Ditch
+UDP-DS8 (K25-2),04 - Kirie,42.0752021,-87.9221601,Feehanville Ditch
+UDP-DS8 (K26),04 - Kirie,42.07472,-87.92194,Feehanville Ditch
