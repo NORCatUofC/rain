@@ -30,7 +30,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script src="js/jquery-csv.js"></script>
-    <script src="js/cumulativeCsos.js"></script>
+    <script src="js/csoData.js"></script>
 
     <script>
         // Handler for .ready() called.
@@ -44,19 +44,7 @@
             accessToken: 'pk.eyJ1Ijoic2NvdHRiZXNsb3ciLCJhIjoiZ3J0aHNYZyJ9.J2pdf4MyW3Y-etg6Je5PXw'
         }).addTo(mymap);
 
-        $.ajax({
-            url: "data/outfall_points.csv",
-            async: false,
-            success: function (csvd) {
-                var data = $.csv.toObjects(csvd);
-                alert(JSON.stringify(data));
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                alert('request failed');
-            },
-            dataType: "text",
-
-        });
+        readCsoEvents();
 
     </script>
 
