@@ -84,14 +84,14 @@ def process_nexrad(fn, f):
         return 0
 
     # Format for NEXRAD files changed (byte string and index), try for both formats
-    if len(f.sweeps[sweep][0]) > 4:
-        sweep_idx = 4
-        ref_str = b'REF'
-    else:
-        sweep_idx = 1
-        ref_str = 'REF'
-
     try:
+        if len(f.sweeps[sweep][0]) > 4:
+            sweep_idx = 4
+            ref_str = b'REF'
+        else:
+            sweep_idx = 1
+            ref_str = 'REF'
+        
         ref_hdr = f.sweeps[sweep][0][sweep_idx][ref_str][0]
         ref_range = np.arange(ref_hdr.num_gates) * ref_hdr.gate_width + ref_hdr.first_gate
         ref = np.array([ray[sweep_idx][ref_str][1] for ray in f.sweeps[sweep]])
@@ -169,6 +169,6 @@ nexrad_schema = StructType(nexrad_fields)
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
 zip_list = list(set([z[0] for z in zip_tuples]))
-zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip', zip_list).mean('precip')
+zip_nexrad_pivot = nexrad_df.groupBy('timestamp').pivot('zip', zip_list).mean('precip')
 # Adding header because pivot makes unclear which shape is what
 zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)
