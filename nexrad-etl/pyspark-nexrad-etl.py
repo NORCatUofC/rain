@@ -84,14 +84,14 @@ def process_nexrad(fn, f):
         return 0
 
     # Format for NEXRAD files changed (byte string and index), try for both formats
-    if len(f.sweeps[sweep][0]) > 4:
-        sweep_idx = 4
-        ref_str = b'REF'
-    else:
-        sweep_idx = 1
-        ref_str = 'REF'
-
     try:
+        if len(f.sweeps[sweep][0]) > 4:
+            sweep_idx = 4
+            ref_str = b'REF'
+        else:
+            sweep_idx = 1
+            ref_str = 'REF'
+        
         ref_hdr = f.sweeps[sweep][0][sweep_idx][ref_str][0]
         ref_range = np.arange(ref_hdr.num_gates) * ref_hdr.gate_width + ref_hdr.first_gate
         ref = np.array([ray[sweep_idx][ref_str][1] for ray in f.sweeps[sweep]])
@@ -115,6 +115,7 @@ def process_nexrad(fn, f):
     # Create timestamp in epoch (without milliseconds) for datetime later
     ts = datetime.strptime(re.search(r'\d{8}_\d{6}',fn).group(), '%Y%m%d_%H%M%S')
     # Get epoch (without milliseconds), subtracting 5 hours to convert from GMT to CST
+    # Not sure why this isn't working, but necessary to do again in pandas
     time_epoch = time.mktime(ts.timetuple()) - (5 * 3600)
 
     ts_arr = np.ones([len(az),len(ref_range)])*time_epoch
@@ -123,8 +124,8 @@ def process_nexrad(fn, f):
     arr_simp = arr_rows.reshape(-1,4)
     # Remove any nan values to reduce size
     arr_simp = arr_simp[~np.isnan(arr_simp).any(1)]
-    # Remove any rows where dBZ is too low to be significant (less than 15)
-    return arr_simp[np.where(arr_simp[:,3]>15.0)]
+    # Remove any rows where dBZ is too low to be significant (less than 20)
+    return arr_simp[np.where(arr_simp[:,3]>20.0)]
 
 # Loading zips into list of tuples with zip code and MultiPolygon
 # chi_zips.geojson is in data/ folder, features are slightly simplified
@@ -142,11 +143,8 @@ for feat in chi_zips['features']:
 def precip_rate(dbz):
     return pow(pow(10, dbz/10)/200, 0.625)
 
-# sc._jsc.hadoopConfiguration().set('fs.s3n.awsAccessKeyId', os.getenv('AWS_ACCESS_KEY_ID'))
-# sc._jsc.hadoopConfiguration().set('fs.s3n.awsSecretAccessKey',os.getenv('AWS_SECRET_ACCESS_KEY'))
-# s3nRdd = sc.binaryFiles('s3n://noaa-nexrad-level2/2006/07/09/KLOT/KLOT20060709_000601.gz')
-klot_para = sc.parallelize(klot_keys)
-s3nRdd = klot_para.flatMap(s3_map_func).repartition(200)
+klot_para = sc.parallelize(klot_keys,250)
+s3nRdd = klot_para.flatMap(s3_map_func)
 
 # Passing tuples through so that filename can be preserved
 s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
@@ -170,7 +168,7 @@ nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
-zip_list = [z[0] for z in zip_tuples]
-zip_nexrad_pivot = nexrad_df.groupby('timestamp').pivot('zip', zip_list).mean('precip')
+zip_list = list(set([z[0] for z in zip_tuples]))
+zip_nexrad_pivot = nexrad_df.groupBy('timestamp').pivot('zip', zip_list).mean('precip')
 # Adding header because pivot makes unclear which shape is what
 zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)

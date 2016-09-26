@@ -1,2 +1,3 @@
 nexrad_data/*.gz
 .ipynb_checkpoints
+test-aug3
