@@ -1,5 +1,6 @@
 var csoLatLongs = {};
 var csoEvents = [];
+var markers = [];
 
 const CUMULATIVE = "cumulative"; 
 
@@ -14,7 +15,7 @@ function readCsoPoints() {
                 var csoPoint = csoPoints[i];
                 csoLatLongs[csoPoint.outfall_name] = csoPoint;
             }
-            drawMap(CUMULATIVE);
+            drawMap(CUMULATIVE, csoEvents);
         },
         error: function (xhr, textStatus, errorThrown) {
             alert('Failed to retrieve lat/longs: ' + textStatus);
@@ -29,7 +30,7 @@ function readCsoEvents(csoPoints) {
         dataType: "text",
         success: function (csvd) {
             csoEvents = $.csv.toObjects(csvd);
-            drawMap(CUMULATIVE);
+            drawMap(CUMULATIVE, csoEvents);
         },
         error: function (xhr, textStatus, errorThrown) {
             alert('Failed to retrieve cso events: ' + textStatus);
@@ -38,13 +39,13 @@ function readCsoEvents(csoPoints) {
     })
 }
 
-function drawMap(mapType) {
+function drawMap(mapType, argCsoEvents) {
     if ((jQuery.isEmptyObject(csoLatLongs)) || (csoEvents.length == 0)) {
         return;
     }
     
     if (mapType == CUMULATIVE) {
-        drawCumulative(csoEvents);
+        drawCumulative(argCsoEvents);
     }
 }
 
@@ -63,7 +64,7 @@ $("#slider").bind("valuesChanged", function(e, data){
         }
         
     }
-    drawCumulative(modifiedCsoEvents);
+    drawMap(CUMULATIVE, modifiedCsoEvents);
 });
     
     
@@ -82,7 +83,7 @@ function drawCumulative(argCsoEvents) {
     }
     
     var data = dictToSortedList(cumulative);
-    
+    clearMarkers();
     for (var i = 0; i < data.length; i++) {
 
         var color = 'blue';
@@ -102,6 +103,7 @@ function drawCumulative(argCsoEvents) {
         }).addTo(mymap);
         
         circle.bindPopup(value.outfall_name + "<br>Cum. dump: " + value.value + " mins.");
+        markers.push(circle);
         
     }
 }
@@ -120,4 +122,11 @@ function dictToSortedList(dict) {
         retVal.push({outfall_name: outfalls_by_num[values[i]], value: values[i]});
     }
     return retVal;
+}
+
+function clearMarkers() {
+    for (var i = 0; i < markers.length; i++) {
+        mymap.removeLayer(markers[i]);
+    }
+    markers = [];
 }
