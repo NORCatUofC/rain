@@ -53,12 +53,12 @@ function drawMap(mapType, argCsoEvents) {
 $("#slider").bind("valuesChanged", function(e, data){
     var modifiedCsoEvents = [];
     var a = Object.prototype.toString.call(data.values.min);
-    var startDate = data.values.min;
-    var endDate = data.values.max;
+    var startDate = data.values.min.setHours(0, 0, 0, 0, 0);;
+    var endDate = data.values.max.setHours(0, 0, 0, 0, 0);;
     for (var i = 0; i < csoEvents.length; i++) {
         var csoEvent = csoEvents[i];
-        var csoStart = new Date(csoEvent['Open date/time']);
-        var csoEnd = new Date(csoEvent['Close date/time']);
+        var csoStart = new Date(csoEvent['Open date/time']).setHours(0, 0, 0, 0, 0);;
+        var csoEnd = new Date(csoEvent['Close date/time']).setHours(0, 0, 0, 0, 0);;
         if ((startDate <= csoStart) && (endDate >= csoEnd)) {
             modifiedCsoEvents.push(csoEvent);
         }
