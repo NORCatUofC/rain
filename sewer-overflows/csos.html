@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="web_libraries/jQRangeSlider-5.7.2/css/iThing-min.css" />
 
 </head>
 
@@ -21,6 +22,16 @@
         }
     </style>
 
+    <div class="container" style="margin-bottom:20px;margin-top:20px;">
+        <div class="row">
+            <button type="button" id="myButton" class="btn btn-primary" autocomplete="off">Test</button>
+        </div>
+        <div class="row">
+            <div id="slider"></div>
+        </div>
+
+    </div>
+
     <div class="container">
         <div id="theMap"></div>
     </div>
@@ -31,11 +42,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script src="js/jquery-csv.js"></script>
     <script src="js/csoData.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+    <script src="web_libraries/jQRangeSlider-5.7.2/jQDateRangeSlider-min.js"></script>
 
     <script>
-        // Handler for .ready() called.
 
-        var mymap = L.map('theMap').setView([41.8801, -87.6268], 10);
+        var mymap = L.map('theMap').setView([41.8801, -87.6268], 9);
 
         L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -46,7 +58,16 @@
 
         readCsoPoints();
         readCsoEvents();
-
+        $("#slider").dateRangeSlider({
+        bounds: {
+                min: new Date(2009, 7, 1),
+                max: new Date(2016, 6, 30)
+            },
+            defaultValues: {
+                min: new Date(2009, 7, 1),
+                max: new Date(2016, 6, 30)
+            }
+        });
     </script>
 
 </body>

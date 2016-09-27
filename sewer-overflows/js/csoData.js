@@ -1,6 +1,8 @@
 var csoLatLongs = {};
 var csoEvents = [];
 
+const CUMULATIVE = "cumulative"; 
+
 function readCsoPoints() {
     $.ajax({
         url: "/data/outfall_points.csv",
@@ -12,13 +14,11 @@ function readCsoPoints() {
                 var csoPoint = csoPoints[i];
                 csoLatLongs[csoPoint.outfall_name] = csoPoint;
             }
-            drawMap();
+            drawMap(CUMULATIVE);
         },
         error: function (xhr, textStatus, errorThrown) {
             alert('Failed to retrieve lat/longs: ' + textStatus);
         }
-
-
     })
 }
 
@@ -29,25 +29,50 @@ function readCsoEvents(csoPoints) {
         dataType: "text",
         success: function (csvd) {
             csoEvents = $.csv.toObjects(csvd);
-            drawMap();
+            drawMap(CUMULATIVE);
         },
         error: function (xhr, textStatus, errorThrown) {
             alert('Failed to retrieve cso events: ' + textStatus);
         }
 
-
     })
 }
 
-function drawMap() {
+function drawMap(mapType) {
     if ((jQuery.isEmptyObject(csoLatLongs)) || (csoEvents.length == 0)) {
         return;
     }
     
-    // Find cumulative for outfall points
-    var cumulative = {};
+    if (mapType == CUMULATIVE) {
+        drawCumulative(csoEvents);
+    }
+}
+
+// When the dates are changed, update the values
+$("#slider").bind("valuesChanged", function(e, data){
+    var modifiedCsoEvents = [];
+    var a = Object.prototype.toString.call(data.values.min);
+    var startDate = data.values.min;
+    var endDate = data.values.max;
     for (var i = 0; i < csoEvents.length; i++) {
         var csoEvent = csoEvents[i];
+        var csoStart = new Date(csoEvent['Open date/time']);
+        var csoEnd = new Date(csoEvent['Close date/time']);
+        if ((startDate <= csoStart) && (endDate >= csoEnd)) {
+            modifiedCsoEvents.push(csoEvent);
+        }
+        
+    }
+    drawCumulative(modifiedCsoEvents);
+});
+    
+    
+function drawCumulative(argCsoEvents) {
+
+    // Find cumulative for outfall points
+    var cumulative = {};
+    for (var i = 0; i < argCsoEvents.length; i++) {
+        var csoEvent = argCsoEvents[i];
         if (csoEvent['Outfall Structure'] in csoLatLongs) {
             if (!(csoEvent['Outfall Structure'] in cumulative)) {
                 cumulative[csoEvent['Outfall Structure']] = 0.0;
@@ -95,7 +120,4 @@ function dictToSortedList(dict) {
         retVal.push({outfall_name: outfalls_by_num[values[i]], value: values[i]});
     }
     return retVal;
-    
-        
-    
 }
