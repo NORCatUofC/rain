@@ -96,7 +96,6 @@ $(".dateRange").focusout(function () {
     drawMap(CUMULATIVE, modifiedCsoEvents);
 });
 
-
 function drawCumulative(argCsoEvents) {
 
     // Find cumulative for outfall points
