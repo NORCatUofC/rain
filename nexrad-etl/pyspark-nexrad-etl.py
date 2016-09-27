@@ -25,7 +25,10 @@ klot_keys = klot_keys[1:]
 klot_keys = [bucket.get_key(k) for k in klot_keys]
 
 def s3_map_func(key):
-    yield (key.name, key.get_contents_as_string())
+    try:
+        return (key.name, key.get_contents_as_string())
+    except:
+        return (None, None)
 
 from metpy.io.nexrad import Level2File
 from pyproj import Geod
@@ -69,11 +72,14 @@ def in_bbox(x,y):
 def read_nexrad(fn, f):
   nex = f
   if fn.endswith('.gz'):
-    nex = zlib.decompress(nex,15+32)
+      try:
+          nex = zlib.decompress(nex,15+32)
+      except:
+          return 0
   try:
     nex = Level2File(BytesIO(nex))
   except:
-    nex = 0
+    return 0
   return nex
 
 def process_nexrad(fn, f):
@@ -91,7 +97,7 @@ def process_nexrad(fn, f):
         else:
             sweep_idx = 1
             ref_str = 'REF'
-        
+
         ref_hdr = f.sweeps[sweep][0][sweep_idx][ref_str][0]
         ref_range = np.arange(ref_hdr.num_gates) * ref_hdr.gate_width + ref_hdr.first_gate
         ref = np.array([ray[sweep_idx][ref_str][1] for ray in f.sweeps[sweep]])
@@ -141,10 +147,13 @@ for feat in chi_zips['features']:
 
 # Convert precip in dBZ into mm/hr using Marshall-Palmer https://en.wikipedia.org/wiki/DBZ_(meteorology)
 def precip_rate(dbz):
-    return pow(pow(10, dbz/10)/200, 0.625)
+    if dbz <= 50.0:
+        return pow(pow(10, dbz/10)/200, 0.625)
+    else:
+        return pow(pow(10, dbz/10)/250, 0.833)
 
 klot_para = sc.parallelize(klot_keys,250)
-s3nRdd = klot_para.flatMap(s3_map_func)
+s3nRdd = klot_para.map(s3_map_func).filter(lambda x: x[0] != None)
 
 # Passing tuples through so that filename can be preserved
 s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
