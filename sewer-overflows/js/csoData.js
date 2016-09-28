@@ -30,6 +30,10 @@ function readCsoEvents(csoPoints) {
         dataType: "text",
         success: function (csvd) {
             csoEvents = $.csv.toObjects(csvd);
+            for (var i=0; i < csoEvents.length; i++) {
+                csoEvents[i]['Open date/time'] = new Date(csoEvents[i]['Open date/time']);
+                csoEvents[i]['Close date/time'] = new Date(csoEvents[i]['Close date/time']);
+            }
             drawMap(CUMULATIVE, csoEvents);
         },
         error: function (xhr, textStatus, errorThrown) {
@@ -56,8 +60,8 @@ $("#slider").bind("valuesChanged", function (e, data) {
     var endDate = data.values.max.setHours(0, 0, 0, 0, 0);;
     for (var i = 0; i < csoEvents.length; i++) {
         var csoEvent = csoEvents[i];
-        var csoStart = new Date(csoEvent['Open date/time']).setHours(0, 0, 0, 0, 0);;
-        var csoEnd = new Date(csoEvent['Close date/time']).setHours(0, 0, 0, 0, 0);;
+        var csoStart = csoEvent['Open date/time'].setHours(0, 0, 0, 0, 0);
+        var csoEnd = csoEvent['Close date/time'].setHours(0, 0, 0, 0, 0);
         if ((startDate <= csoStart) && (endDate >= csoEnd)) {
             modifiedCsoEvents.push(csoEvent);
         }
