@@ -15,7 +15,8 @@ flooding and water in street flooding from 2000 through mid-September of 2016. A
 example of the data format is below, and location information is provided on a block
 level, (i.e. 1200 W Cuyler Ave).
 
-The data aggregated by zip code, neighborhood, and ward as well as the date is in the
+The data aggregated by zip code, neighborhood, ward, and community area (defined by
+the [community areas on the Chicago Data Portal](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6))  as well as the date is in the
 [311_data/](311_data/) folder. Additionally, because the data is split between calls
 for "Water in Basement" and "Water in Street", it is also split into these categories
 and aggregated. Files beginning with `wib` are for basement flooding, and files
