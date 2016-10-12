@@ -133,24 +133,22 @@ def process_nexrad(fn, f):
     # Remove any rows where dBZ is too low to be significant (less than 20)
     return arr_simp[np.where(arr_simp[:,3]>20.0)]
 
-# Loading zips into list of tuples with zip code and MultiPolygon
-# chi_zips.geojson is in data/ folder, features are slightly simplified
-with open('chi_zips.geojson','r') as cg:
-    chi_zips = geojson.load(cg)
+# Loading grid cells into list of tuples with grid id and MultiPolygon
+# chicago_grid.geojson is in data/ folder
+with open('chicago_grid.geojson','r') as cg:
+    chi_grid = geojson.load(cg)
 
-zip_tuples = list()
-for feat in chi_zips['features']:
+grid_tuples = list()
+for feat in chi_grid['features']:
     shapes = feat['geometry']['coordinates'][0]
     poly_tuples = [(x[0],x[1]) for x in shapes]
-    zip_code = feat['properties']['zip']
-    zip_tuples.append((zip_code,poly_tuples))
+    grid_id = feat['properties']['id']
+    grid_tuples.append((grid_id,poly_tuples))
 
 # Convert precip in dBZ into mm/hr using Marshall-Palmer https://en.wikipedia.org/wiki/DBZ_(meteorology)
-def precip_rate(dbz):
-    if dbz <= 50.0:
-        return pow(pow(10, dbz/10)/200, 0.625)
-    else:
-        return pow(pow(10, dbz/10)/250, 0.833)
+# Then convert mm/hr to inches assuming 5 minute intervals
+def precip(dbz):
+    return pow(pow(10, dbz/10)/200, 0.625)*(0.0833/25.4)
 
 klot_para = sc.parallelize(klot_keys,250)
 s3nRdd = klot_para.map(s3_map_func).filter(lambda x: x[0] != None)
@@ -163,21 +161,21 @@ s3bin_res = s3nRdd.map(lambda x: (x[0],read_nexrad(x[0],x[1]))
                       ).flatMap(lambda x: x
                       ).map(lambda x: (datetime.fromtimestamp(x[0]),float(x[1]),float(x[2]),float(x[3]))
                       ).filter(lambda x: in_bbox(x[1],x[2])
-                      ).map(lambda x: (x[0],x[1],x[2],x[3],spatial_join_mock(x[1],x[2],zip_tuples))
+                      ).map(lambda x: (x[0],x[1],x[2],x[3],spatial_join_mock(x[1],x[2],grid_tuples))
                       ).filter(lambda x: x[4] != ''
-                      ).map(lambda x: (x[0],x[1],x[2],precip_rate(x[3]),x[4]))
+                      ).map(lambda x: (x[0],x[1],x[2],precip(x[3]),x[4]))
 
 # Convert to tuple with native Python data types for DataFrame
 nexrad_fields = [StructField('timestamp',TimestampType(),True),
                  StructField('lon',FloatType(),True),
                  StructField('lat',FloatType(),True),
                  StructField('precip',FloatType(),True),
-                 StructField('zip',StringType(),True)]
+                 StructField('grid',StringType(),True)]
 nexrad_schema = StructType(nexrad_fields)
 
 # Creating DataFrames https://spark.apache.org/docs/2.0.0-preview/sql-programming-guide.html#programmatically-specifying-the-schema
 nexrad_df = sqlContext.createDataFrame(s3bin_res, nexrad_schema)
-zip_list = list(set([z[0] for z in zip_tuples]))
-zip_nexrad_pivot = nexrad_df.groupBy('timestamp').pivot('zip', zip_list).mean('precip')
+grid_list = list(set([g[0] for g in grid_tuples]))
+grid_nexrad_pivot = nexrad_df.groupBy('timestamp').pivot('grid', grid_list).mean('precip')
 # Adding header because pivot makes unclear which shape is what
-zip_nexrad_pivot.write.csv('s3n://nexrad-etl/test',header=True)
+grid_nexrad_pivot.write.csv('s3n://nexrad-etl/test-grid',header=True)

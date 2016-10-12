@@ -3,6 +3,9 @@
 Looking into processing  [NEXRAD Level III Precipitation Data](http://www.ncdc.noaa.gov/data-access/radar-data/nexrad-products) into a more
 usable format for multiple projects.
 
+Very basic demo of about a month of data aggregated to zip codes being animated
+by precipitation over time: [CARTO Viz](https://pjsier.carto.com/viz/97e178e4-90ab-11e6-b70c-0e3ff518bd15/embed_map)
+
 ## Notes
 
 * Currently using Apache Spark to read files directly from S3 as byte strings,
