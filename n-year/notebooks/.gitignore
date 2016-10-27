@@ -1,4 +1,5 @@
 data/*.csv
 !data/n_year_definitions.csv
 !data/rain_events_ohare.csv
+!data/n_year_storms_ohare_noaa.csv
 .ipynb_checkpoints
