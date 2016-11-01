@@ -3,20 +3,20 @@
 
 ###How Do I Get Involved?
 
-1. Follow our <a href="https://chihacknight.slack.com/messages/chicago-rain" target="_blank">Slack Channel</a> (<a href="http://slackme.chihacknight.org/" target="_blank">Join our Slack channel</a>)
+1. Follow our [Slack Channel](https://chihacknight.slack.com/messages/chicago-rain),
+([to join the Slack Channel](http://slackme.chihacknight.org/)).
 
-2. Check out our data on <a href="https://drive.google.com/folderview?id=0B_QE7itsD1z8Qi1BY2RWU1FRaE0&usp=sharing" target="_blank">Google Drive</a>
+2. Check out our data on [Google Drive](https://drive.google.com/folderview?id=0B_QE7itsD1z8Qi1BY2RWU1FRaE0&usp=sharing)
 
 3. Read the list of questions below.  If you're interested in answering or working with others to do so
- * Hack with us on <a href="https://chihacknight.org" target="_blank">Tuesday nights at the Merchandise Mart at ChiHackNight</a>
- * Announce it on the <a href="https://chihacknight.slack.com/messages/chicago-rain" target="_blank">Slack Channel</a>
+ * Hack with us on [Tuesday nights at the Merchandise Mart at ChiHackNight](https://chihacknight.org)
+ * Announce it on the [Slack Channel](https://chihacknight.slack.com/messages/chicago-rain)
  * Reach out to @sbeslow or @pjsier
-
- Feel free to add your own question to the list.
+ * Feel free to add your own question to the list.
 
 4. Look through the directories in the repo, and check out the work that we're up to.
 
-###Our List of Questions
+### Our List of Questions
 
 #### Rainfall Distribution
 It can be thunderstorming in one part of the city, and dry in another.
@@ -38,9 +38,7 @@ It can be thunderstorming in one part of the city, and dry in another.
 * Is it time to rethink the concept of n-year storms?
 
 #### Basement Flooding
-* Map our FEMA and 311 data.  What do you find?  By ward?  Zip? Neighborhood? region?
-* How can we build a bigger, better database to get better information about how many households experience basement flooding?
-* Is there a way to predict basement flooding?
+* [See notes and updates](flooding/)
 
 #### Bike Riders
 * Can we use this data to help bike riders be more safe?  Determine if a storm is too heavy to ride?

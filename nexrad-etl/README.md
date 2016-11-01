@@ -3,8 +3,12 @@
 Looking into processing  [NEXRAD Level III Precipitation Data](http://www.ncdc.noaa.gov/data-access/radar-data/nexrad-products) into a more
 usable format for multiple projects.
 
-Very basic demo of about a month of data aggregated to a uniform grid of about one
-square mile cells being animated by precipitation over time (only for times with precipitation): [CARTO Viz](https://pjsier.carto.com/viz/57a8205c-9150-11e6-ba33-0e3ebc282e83/embed_map)
+## Updates
+
+* Initial round of about a decade of weather data over a grid of Chicago now
+[on our Google Drive folder](https://drive.google.com/folderview?id=0B_QE7itsD1z8Qi1BY2RWU1FRaE0&usp=sharing).
+Files are the `chi_grid_200k_precip` zip files, and the grid is `chicago_grid.geojson`
+* See the current demo showing precipitation over the grid and time [here](https://norcatuofc.github.io/rain-viz/)
 
 ## Notes
 

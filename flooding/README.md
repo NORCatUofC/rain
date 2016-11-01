@@ -8,6 +8,24 @@ The Center for Neighborhood Technology report referenced in the article has
 additional information about how basement flooding disproportionately affects Chatham,
 along with other neighborhoods in Chicago: [CNT RainReady Chatham](http://www.cnt.org/sites/default/files/publications/CNT_RainReady%20Community%20-%20Chatham.pdf)
 
+## Updates
+
+* After confirming that we received data with the same distribution as WBEZ,
+it looks like aggregating calls to zip code hides the huge concentration of calls
+in the Austin community area ([see notebook](Flooding Call Distribution.ipynb)).
+* The distribution of basement flooding calls by zip code matches up very well with
+FEMA disaster relief claims ([see notebook](FEMA and 311 Calls by Zip.ipynb)). Because
+of this, it seems reasonable that the calls are an accurate picture of the actual
+distribution of basement flooding (if not the total incidence).
+* However, street flooding calls seem to fluctuate more across areas, and don't
+line up as well to other data sources ([see notebook](Basement vs Street Flooding.ipynb)).
+* [One presentation given by MWRD](https://www.mwrd.org/pv_obj_cache/pv_obj_id_3E3A3EB610DB06410C2605D11714E583525A7000/filename/12-18-2015_Seminar_Presentation.pdf) shows the potential distribution of the flood risk
+output of their computer sewer model. Still need to confirm with MWRD, but it looks
+like Austin is identified as having high risk, but not the South Side.
+* From looking at potential relationships with housing data ([from Institute for Housing Studies](https://www.housingstudies.org/)), the clearest correlation
+seems to be between basement flooding and number of foreclosures (2005-2015) in a
+community area ([see notebook](IHS Data and Basement Flooding.ipynb)).
+
 ## 311 Data
 
 As the result of a FOIA to 311, we received all calls to 311 for water in basement
